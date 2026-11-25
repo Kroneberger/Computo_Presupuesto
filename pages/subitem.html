@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha técnica | Cómputo y Presupuesto</title>
+    <link rel="stylesheet" href="../CSS/subitem.css">
+    <script type="module" src="../javascript/subitem.js"></script>
+</head>
+<body>
+<header class="header">
+    <a href="../index.html">← Volver al inicio</a>
+    <h1>CÓMPUTO Y PRESUPUESTO</h1>
+</header>
+<main class="container">
+    <div class="page-heading">
+        <div>
+            <h2>Ficha técnica del subítem</h2>
+            <p>Administración de información técnica e insumos.</p>
+        </div>
+        <span id="estado-ficha" class="badge">Borrador</span>
+    </div>
+    <!-- IDENTIFICACIÓN -->
+    <section class="panel">
+    <h3>01. Identificación del subítem</h3>
+    <div class="form-grid">
+        <div>
+            <label>ID</label>
+            <p id="id" class="dato-fijo"></p>
+        </div>
+        <div>
+            <label>Descripción</label>
+            <p id="descripcion" class="dato-fijo"></p>
+        </div>
+        <div>
+            <label>Unidad</label>
+            <p id="unidad" class="dato-fijo"></p>
+        </div>
+        <div>
+            <label>Ítem al que pertenece</label>
+            <p id="item" class="dato-fijo"></p>
+        </div>
+    </div>
+</section>
+    <!-- MATERIALES -->
+    <section class="panel">
+        <h3>02. Materiales</h3>
+        <div class="selector-grid">
+            <label>Buscar material
+                <input id="buscar-material" type="text" placeholder="Buscar material...">
+            </label>
+            <label>Seleccionar material
+                <select id="select-material">
+                    <option value="">Seleccionar...</option>
+                </select>
+            </label>
+            <label>Cantidad por unidad
+                <input id="cantidad-material" type="number" min="0" step="any" placeholder="0.00">
+            </label>
+            <button id="agregar-material" type="button">+ Agregar material</button>
+        </div>
+        <div id="tabla-materiales"></div>
+    </section>
+    <!-- MANO DE OBRA -->
+    <section class="panel">
+        <h3>03. Mano de obra</h3>
+        <div class="selector-grid">
+        <label>Buscar categoría
+            <input id="buscar-mano-obra" type="text" placeholder="Buscar mano de obra...">
+        </label>
+        <label>Seleccionar categoría
+            <select id="select-mano-obra">
+                <option value="">Seleccionar...</option>
+            </select>
+        </label>
+        <label>Rendimiento (horas)
+            <input id="cantidad-mano-obra" type="number" min="0" step="any" placeholder="0.00">
+        </label>
+        <button id="agregar-mano-obra" type="button"> + Agregar mano de obra </button>
+        </div>
+        <div id="tabla-mano-obra"></div>
+    </section>
+    <!-- EQUIPOS -->
+    <section class="panel">
+        <h3>04. Equipos</h3>
+        <div class="selector-grid">
+            <label>Buscar equipo
+                <input id="buscar-equipo" type="text" placeholder="Buscar equipo...">
+            </label>
+            <label>Seleccionar equipo
+                <select id="select-equipo">
+                    <option value="">Seleccionar...</option>
+                </select>
+            </label>
+            <label>Consumo en horas
+                <input id="cantidad-equipo" type="number" min="0" step="any" placeholder="0.00">
+            </label>
+            <button id="agregar-equipo" type="button">+ Agregar equipo</button>
+        </div>
+        <div id="tabla-equipos"></div>
+    </section>
+    <!-- INFORMACIÓN COMPLEMENTARIA -->
+    <section class="panel">
+        <h3>05. Información complementaria</h3>
+        <label>Descripción ampliada
+            <textarea id="descripcion-ampliada"></textarea>
+        </label>
+        <label>Observaciones
+            <textarea id="observaciones"></textarea>
+        </label>
+    </section>
+    <!-- ACCIONES -->
+    <section class="actions">
+        <button id="guardar-borrador" class="secondary">Guardar borrador
+        </button>
+        <button id="publicar-ficha" class="primary">Publicar y bloquear ficha</button>
+        <button id="desbloquear-ficha" class="warning" hidden>Desbloquear para editar</button>
+    </section>
+    <p id="mensaje" role="status"></p>
+</main>
+</body>
+</html>
