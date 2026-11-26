@@ -26,9 +26,15 @@
         0 10px 30px rgba(0,0,0,.15);
     --radius-md: 12px;
     --transition: .25s ease;
-
+    --color-border: #e2e8f0;
+    --color-hover: #f8fafc;
+    --color-arrow-bg: #edf2f7;
+    --color-arrow-hover: #dbeafe;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --transition-fast: .2s ease;
+    --transition-normal: .35s ease;
 }
-
 /*Fin de codigo de copliot*/
 
 * {
@@ -40,7 +46,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: var(--blanco);
     color: var(--azul-oscuro);
     line-height: 1.6;
@@ -257,6 +263,83 @@ body {
     font-weight: 700;
 }
 
+.rubro-toggle {
+    width: calc(100% - 32px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.rubro-toggle:hover {
+    background: var(--color-hover);
+    border-radius: var(--radius-sm);
+}
+
+.toggle-label {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.flecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: var(--color-primary);
+    line-height: 1;
+    font-size: 1.1rem;
+    transition:
+        transform var(--transition-normal),
+}
+
+.flecha svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.rubro-toggle.active .flecha {
+    transform: rotate(180deg);
+}
+
+.rubro-toggle:focus-visible {
+    outline: 3px solid rgba(37,99,235,.25);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+.rubro-toggle {
+    position: relative;
+}
+
+.rubro-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width .3s ease;
+}
+
+.rubro-toggle:hover::after,
+.rubro-toggle.active::after {
+    width: 100%;
+}
 /* =================================
     5. INFORMACION
 ================================= */
@@ -455,4 +538,133 @@ body {
 
 .footer-contacto a:hover {
     opacity: 0.7;
+}
+
+
+
+/* ================================
+   NAVEGACIÓN PRINCIPAL
+================================ */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Enlaces y botones */
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    color: var(--blanco);
+    text-decoration: none;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background 0.25s ease,
+                color 0.25s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+/* ================================
+   MENÚ DESPLEGABLE
+================================ */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-btn {
+    font-family: inherit;
+}
+
+.flecha-dropdown {
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: transform 0.25s ease;
+}
+
+/* Menú oculto */
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+
+    min-width: 220px;
+    padding: 8px;
+
+    background-color: var(--azul-secundario);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+
+    transition: opacity 0.2s ease,
+                transform 0.2s ease,
+                visibility 0.2s ease;
+
+    z-index: 100;
+}
+
+/* Estado abierto */
+
+.nav-dropdown.abierto .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown.abierto .flecha-dropdown {
+    transform: rotate(180deg);
+}
+
+/* Opciones del desplegable */
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: background 0.2s ease,
+                color 0.2s ease;
+}
+
+.dropdown-link span {
+    color: var(--color-secundario);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.dropdown-link:hover {
+    background-color: var(--gris-fondo);
+}
+
+/* Contacto */
+
+.nav-contacto {
+    border: 1px solid var(--color-border);
 }

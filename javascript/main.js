@@ -174,3 +174,54 @@ function mostrarSubitems(item, contenedor) {
     });
     contenedor.appendChild(lista);
 }
+
+
+// ===================================
+// MENÚ DESPLEGABLE DE BIBLIOTECA. PAGINA PRINCIAPAL
+// ===================================
+
+const bibliotecaBtn = document.querySelector("#biblioteca-btn");
+const bibliotecaMenu = document.querySelector("#biblioteca-menu");
+const bibliotecaDropdown = document.querySelector(".nav-dropdown");
+if (bibliotecaBtn && bibliotecaMenu && bibliotecaDropdown) {
+    bibliotecaBtn.addEventListener("click", () => {
+        const estaAbierto =
+            bibliotecaDropdown.classList.toggle("abierto");
+        bibliotecaBtn.setAttribute(
+            "aria-expanded",
+            estaAbierto
+        );
+    });
+    // Cerrar al hacer clic fuera del menú
+    document.addEventListener("click", (evento) => {
+        if (!bibliotecaDropdown.contains(evento.target)) {
+            bibliotecaDropdown.classList.remove("abierto");
+            bibliotecaBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+    });
+    // Cerrar al seleccionar una opción
+    bibliotecaMenu.querySelectorAll("a").forEach(enlace => {
+        enlace.addEventListener("click", () => {
+            bibliotecaDropdown.classList.remove("abierto");
+            bibliotecaBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        });
+    });
+
+// Cerrar al presionar Escape
+    document.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape") {
+            bibliotecaDropdown.classList.remove("abierto");
+            bibliotecaBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+    });
+
+}

@@ -22,11 +22,6 @@ export const equipos = [
     },
     {
     id: "EQ-005",
-    nombre: "Cucharas de albañil",
-    unidad: "h"
-    },
-    {
-    id: "EQ-006",
     nombre: "Rastrillo",
     unidad: "h"
     }

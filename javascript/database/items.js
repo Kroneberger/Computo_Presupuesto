@@ -53,8 +53,8 @@ export const rubros = [
         nombre: "Mamposteria",
         items: [
             {
-                id: "IT-04.1",
-                codigo: "4.1",
+                id: "IT-04",
+                codigo: "4",
                 nombre: "Mamposteria"
             },
         ]

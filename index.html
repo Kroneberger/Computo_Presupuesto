@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computo y Presupuesto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
@@ -22,12 +25,46 @@
             </div>
         </a>
     </div>
-    <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#rubros">Rubros</a>
-        <a href="#informacion">Información</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    
+<nav class="nav">
+    <a href="#inicio" class="nav-link">Inicio</a>
+    <a href="#rubros" class="nav-link">Rubros</a>
+    <a href="#informacion" class="nav-link">Información</a>
+    <div class="nav-dropdown">
+        <button
+            class="nav-link nav-dropdown-btn"
+            id="biblioteca-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="biblioteca-menu"
+        >
+            Biblioteca
+            <span class="flecha-dropdown">⌄</span>
+        </button>
+        <div class="dropdown-menu" id="biblioteca-menu">
+            <a href="#rubros" class="dropdown-link">
+                <span>01</span>
+                Subítems
+            </a>
+            <a href="pages/materiales.html" class="dropdown-link">
+                <span>02</span>
+                Materiales
+            </a>
+            <!-- Agregaremos estas páginas cuando estén creadas -->
+            <!--
+            <a href="pages/mano-obra.html" class="dropdown-link">
+                <span>03</span>
+                Mano de obra
+            </a>
+            <a href="pages/equipos.html" class="dropdown-link">
+                <span>04</span>
+                Equipos
+            </a>
+            -->
+        </div>
+    </div>
+    <a href="#contacto" class="nav-link nav-contacto">Contacto</a>
+</nav>
     </header>
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -318,7 +355,7 @@
     <div class="footer-info">
         <h3>Cómputo y Presupuesto</h3>
         <p>Biblioteca técnica de construcción.</p>
-        <span>Proyecto en desarrollo</span>
+        <span>PLataforma creada</span>
     </div>
     <div class="footer-contacto">
         <h4>Contacto</h4>

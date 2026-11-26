@@ -348,10 +348,10 @@ export const subitemsIniciales = [
     //4 - Mamposteria
     {
         id: "SUB-016",
-        codigo: "4.1.1",
+        codigo: "4.1",
         descripcion: "Mamposteria de ladrillo comun",
         unidad: "m²",
-        itemId: "IT-04.1",
+        itemId: "IT-04",
 
         materiales: [
             {insumoId: "MAT-001", cantidad: 1.5},
@@ -373,10 +373,10 @@ export const subitemsIniciales = [
     },
     {
         id: "SUB-017",
-        codigo: "4.1.2",
+        codigo: "4.2",
         descripcion: "Mamposteria de ladrillo ceramico hueco 8x18x33",
         unidad: "m²",
-        itemId: "IT-04.1",
+        itemId: "IT-04",
 
         materiales: [
             {insumoId: "MAT-001", cantidad: 1.5},
@@ -398,10 +398,10 @@ export const subitemsIniciales = [
     },
     {
         id: "SUB-018",
-        codigo: "4.1.3",
+        codigo: "4.3",
         descripcion: "Mamposteria de ladrillo ceramico hueco 12x18x33",
         unidad: "m²",
-        itemId: "IT-04.1",
+        itemId: "IT-04",
 
         materiales: [
             {insumoId: "MAT-001", cantidad: 1.5},
@@ -423,10 +423,10 @@ export const subitemsIniciales = [
     },
     {
         id: "SUB-019",
-        codigo: "4.1.4",
+        codigo: "4.4",
         descripcion: "Mamposteria de ladrillo ceramico hueco 18x18x33",
         unidad: "m²",
-        itemId: "IT-04.1",
+        itemId: "IT-04",
 
         materiales: [
             {insumoId: "MAT-001", cantidad: 1.5},
