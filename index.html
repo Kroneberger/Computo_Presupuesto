@@ -9,16 +9,25 @@
 <body>
     <!-- ENCABEZADO -->
     <header class="header">
-        <div class="logo">
-            <h2>CP</h2>
-            <span>Computo y Presupuesto</span>
-        </div>
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#rubros">Rubros</a>
-            <a href="#informacion">Información</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+    <div class="header-top">
+        <a href="/" class="logo">
+            <img src="Assets/icons/Logo-HK.png" alt="Logo">
+            <div class="logo-info">
+                <span class="logo-title">
+                    Computo y Presupuesto
+                </span>
+                <span class="logo-subtitle">
+                    Gestión de cómputos e insumos
+                </span>
+            </div>
+        </a>
+    </div>
+    <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#rubros">Rubros</a>
+        <a href="#informacion">Información</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
     </header>
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -30,11 +39,11 @@
                 <p>
                     Una plataforma de consulta técnica dedicada a organizar y presentar información sobre los distintos rubros, ítems y subítems de una obra.
                 </p>
-                <a href="#rubros" class="boton-principal">Explorar rubros</a>
+                <a href="#rubros" class="boton-principal">Explorar items</a>
             </div>
         </section>
         <!-- RUBROS -->
-        <section class="rubros">
+        <section id="rubros" class="rubros">
             <div class="rubros-contenedor">
                 <!-- RUBRO 1 -->
                 <article class="rubro-card">
@@ -51,12 +60,240 @@
                 </article>
                 <!-- RUBRO 2 -->
                 <article class="rubro-card">
-                    <h3>02. Estructura</h3>
+                    <h3>02. Movimiento de suelos</h3>
+                    <p>
+                        Relleno, nivelacion y desmonte del terreno.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-02">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 3 -->
+                <article class="rubro-card">
+                    <h3>03. Estructura</h3>
                     <p>
                         Elementos resistentes que conforman
                         la estructura de la construcción.
                     </p>
-                    <button class="rubro-toggle" data-rubro="RUB-02">
+                    <button class="rubro-toggle" data-rubro="RUB-03">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 4 -->
+                <article class="rubro-card">
+                    <h3>04. Mamposteria</h3>
+                    <p>
+                        Cerramientos y mamposterias de ladrillos comunes, bloques, ceramicos, etc.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-04">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 5 -->
+                <article class="rubro-card">
+                    <h3>05. Tabiqueria</h3>
+                    <p>
+                        Cerramientos y mamposterias de ladrillos comunes, bloques, ceramicos, etc.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-05">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 6 -->
+                <article class="rubro-card">
+                    <h3>06. Aislaciones</h3>
+                    <p>
+                        Cerramientos y mamposterias de ladrillos comunes, bloques, ceramicos, etc.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-06">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 7 -->
+                <article class="rubro-card">
+                    <h3>07. Revoques</h3>
+                    <p>
+                        Revoques
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-07">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 8 -->
+                <article class="rubro-card">
+                    <h3>08. Contrapisos y carpetas</h3>
+                    <p>
+                        Contrapisos y carpetas
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-08">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 9 -->
+                <article class="rubro-card">
+                    <h3>09. Revestimientos</h3>
+                    <p>
+                        Revestimientos
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-09">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 10 -->
+                <article class="rubro-card">
+                    <h3>10. Pisos, umbrales y zocalos</h3>
+                    <p>
+                        Pisos, umbrales y zocalos
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-10">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 11 -->
+                <article class="rubro-card">
+                    <h3>11. Marmoleria</h3>
+                    <p>
+                        Trabajos de marmoleria y mesadas.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-11">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 12 -->
+                <article class="rubro-card">
+                    <h3>12. Cubiertas y techados</h3>
+                    <p>
+                        Tareas de cubiertas y techados, tanto individuales como completas.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-12">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 13 -->
+                <article class="rubro-card">
+                    <h3>13. Cielorrasos</h3>
+                    <p>
+                        Cielorrasos suspendidos, aplicados, de durlock, etc.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-13">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 14 -->
+                <article class="rubro-card">
+                    <h3>14. Carpinterias</h3>
+                    <p>
+                        Puertas y ventanas de aluminio, madera, pvc, etc.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-14">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 15 -->
+                <article class="rubro-card">
+                    <h3>15. Instalacion electrica</h3>
+                    <p>
+                        Tareas de instalacion electrica tanto globales como unitarias.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-15">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 16 -->
+                <article class="rubro-card">
+                    <h3>16. Instalacion sanitaria </h3>
+                    <p>
+                        Instalacion de agua, cloacal, desgues pluviales. Tareas tanto globales como individuales
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-16">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 17 -->
+                <article class="rubro-card">
+                    <h3>17. Instalacion de gas natural</h3>
+                    <p>
+                        Cañeria, artefactos, colocacion de uniones y piezas.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-17">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 18 -->
+                <article class="rubro-card">
+                    <h3>18. Instalacion de acondicionamiento del aire</h3>
+                    <p>
+                        Tareas tanto gloables como individuales.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-18">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 19 -->
+                <article class="rubro-card">
+                    <h3>19. Instalacion de emergencia</h3>
+                    <p>
+                        Tareas de instalacion de emergencia, tanto individuales como globales
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-19">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 20 -->
+                <article class="rubro-card">
+                    <h3>20. Cristales y espejos</h3>
+                    <p>
+                        Trabajos con cristales y espejos.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-20">
+                        Ver ítems
+                        <span class="flecha">⌄</span>
+                    </button>
+                    <div class="subitems-contenedor"></div>
+                </article>
+                <!-- RUBRO 21 -->
+                <article class="rubro-card">
+                    <h3>21. Pinturas</h3>
+                    <p>
+                        Tareas de pintura en muros, cielorrasos, carpinterias, etc.
+                    </p>
+                    <button class="rubro-toggle" data-rubro="RUB-21">
                         Ver ítems
                         <span class="flecha">⌄</span>
                     </button>
@@ -71,16 +308,32 @@
                 <h2>Acerca de la plataforma</h2>
             </div>
             <p>
-                Este espacio está destinado a reunir y organizar información técnica relacionada con el cómputo y presupuesto de obras de construcción.
+                El objetivo de este sitio es ser una base de datos e informacion acerca de cada tarea dentro de una obra, tanto de materiales como de mano de obra o equipos, asi como tambien cantidad de los mismos, consumos, rendimientos, etc. Por el momento no tiene como objeto el calculo de computo y presupuesto dentro de un proyecto, sino mas bien un lugar donde se pueda sacar informacion de manera precisa y ordenada, y luego volcarla a un programa de calculo.
             </p>
         </section>
     </main>
     <!-- PIE DE PAGINA -->
-    <footer id="contacto" class="footer">
-        <h3>Computo y Presupuesto</h3>
+    
+<footer id="contacto" class="footer">
+    <div class="footer-info">
+        <h3>Cómputo y Presupuesto</h3>
         <p>Biblioteca técnica de construcción.</p>
         <span>Proyecto en desarrollo</span>
-    </footer>
+    </div>
+    <div class="footer-contacto">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5492916485917" target="_blank">
+            WhatsApp: +54 9 291 648 5917
+        </a>
+        <a href="mailto:contacto@computoypresupuesto.com">
+            Correo: hernankroneberger@gmail.com
+        </a>
+        <a href="https://www.instagram.com/hernan_krone21/" target="_blank">
+            Instagram: @hernan_krone21
+        </a>
+    </div>
+</footer>
+
     <!-- JAVASCRIPT -->
     <script type="module" src="javascript/main.js"></script>
 </body>

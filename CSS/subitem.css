@@ -10,6 +10,81 @@
 }
 
 
+/*Codigo de Copilot*/
+
+:root {
+
+    /* Colores principales */
+    --color-primary: #1e3a5f;
+    --color-primary-light: #294f7a;
+    --color-secondary: #2563eb;
+
+    /* Fondos */
+    --color-bg: #f5f7fb;
+    --color-card: #ffffff;
+    --color-table-header: #f3f4f6;
+
+    /* Textos */
+    --color-text: #1f2937;
+    --color-text-muted: #6b7280;
+    --color-text-light: #ffffff;
+
+    /* Bordes */
+    --color-border: #d1d5db;
+    --color-border-light: #e5e7eb;
+
+    /* Estados */
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,.05);
+
+    --shadow-md:
+        0 4px 14px rgba(0,0,0,.05),
+        0 1px 3px rgba(0,0,0,.08);
+
+    --shadow-lg:
+        0 8px 24px rgba(0,0,0,.08),
+        0 2px 8px rgba(0,0,0,.06);
+
+    /* Radios */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    /* Espaciados */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Transiciones */
+    --transition-fast: .2s ease;
+    --transition-normal: .3s ease;
+
+    /* Ancho máximo */
+    --container-width: 1400px;
+
+
+    --color-apu: #2563eb;
+    --color-materiales: #10b981;
+    --color-mano-obra: #f59e0b;
+    --color-equipos: #8b5cf6;
+    --color-subitem: #0f172a;
+
+    --color-header: #1e3a5f;
+    --color-white: #ffffff;
+    --back-bg-hover: rgba(255,255,255,.12);
+    --back-bg-active: rgba(255,255,255,.18);
+    --radius-md: 10px;
+    --transition-normal: .25s ease;
+}
+
+/*Fin de odigo de Copilot*/
+
 
 * {
     box-sizing: border-box;
@@ -18,18 +93,47 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background: var(--blanco-fondo);
-    color: var(--azul-oscuro-texto);
+    background: var(--color-bg);
+    color: var(--color-text);
 }
+
 .header {
-    background: var(--azul-header);
-    color: white;
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-light)
+    ); 
+    color: var(--color-text-light);
     padding: 24px 6%;
+    box-shadow: var(--shadow-md);
 }
+
 .header a {
     color: #dce6f2;
     text-decoration: none;
 }
+
+.back-link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
+}
+
+.back-link:hover {
+    background: var(--back-bg-hover);
+    transform: translateX(-2px);
+}
+
+.back-link:active {
+    background: var(--back-bg-active);
+}
+
 .header h1 {
     margin-top: 15px;
     font-size: 23px;
@@ -236,3 +340,20 @@ th {
     background-color: #d1ead9;
     font-weight: bold;
 }
+
+
+
+
+
+#tabla-materiales {
+    border-left: 4px solid var(--color-materiales);
+}
+
+#tabla-mano-obra {
+    border-left: 4px solid var(--color-mano-obra);
+}
+
+#tabla-equipos {
+    border-left: 4px solid var(--color-equipos);
+}
+
