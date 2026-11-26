@@ -5,12 +5,12 @@ export const rubros = [
         nombre: "Preliminares",
         items: [
             {
-                id: "ITEM-001",
+                id: "IT-01.1",
                 codigo: "1.1",
                 nombre: "Preparación del terreno"
             },
             {
-                id: "ITEM-002",
+                id: "IT-01.2",
                 codigo: "1.2",
                 nombre: "Replanteo"
             }
@@ -21,12 +21,12 @@ export const rubros = [
         nombre: "Estructura",
         items: [
             {
-                id: "ITEM-003",
+                id: "IT-02.1",
                 codigo: "2.1",
                 nombre: "Fundaciones"
             },
             {
-                id: "ITEM-004",
+                id: "IT-02.2",
                 codigo: "2.2",
                 nombre: "Estructura resistente"
             }

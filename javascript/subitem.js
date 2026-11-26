@@ -4,32 +4,41 @@ import { manoObra } from "./database/manodeobra.js";
 import { equipos } from "./database/equipos.js";
 import { subitemsIniciales } from "./database/subitems.js";
 
+
+let subitems = structuredClone(subitemsIniciales);
+
+
+
 // ======================================
 // 1. CONFIGURACIÓN Y BASE DE DATOS
 // ======================================
 
-const CLAVE = "bibliotecaSubitems";
-let subitems = JSON.parse(
-    localStorage.getItem(CLAVE)
-) || structuredClone(subitemsIniciales);
+// Obtenemos el ID desde la URL
 const parametros = new URLSearchParams(window.location.search);
 const idURL = parametros.get("id");
-let subitemActual = subitems.find(s => s.id === idURL);
-let modoEdicion = !subitemActual || subitemActual.estado === "borrador";
+// Buscamos el subítem en la base de datos
+const subitemActual = subitemsIniciales.find(
+    subitem => subitem.id === idURL
+);
+// Verificamos que exista
 if (!subitemActual) {
-    subitemActual = {
-    id: "",
-    descripcion: "",
-    unidad: "",
-    item: "",
-    materiales: [],
-    manoObra: [],
-    equipos: [],
-    descripcionAmpliada: "",
-    observaciones: "",
-    estado: "borrador"
-    };
+    document.querySelector("main").innerHTML = `
+        <section class="panel">
+            <h2>Subítem no encontrado</h2>
+            <p>No existe un subítem con el identificador solicitado.</p>
+            <a href="../index.html">Volver a la página principal</a>
+        </section>
+    `;
+} else {
+    // Cargamos los datos principales
+    document.getElementById("id").textContent =
+        subitemActual.id;
+    document.getElementById("descripcion").textContent =
+        subitemActual.descripcion;
+    document.getElementById("unidad").textContent =
+        subitemActual.unidad;
 }
+
 // ======================================
 // 2. ELEMENTOS HTML
 // ======================================
@@ -38,6 +47,35 @@ const $ = id => document.getElementById(id);
 // ======================================
 // IDENTIFICACIÓN DEL SUBÍTEM
 // ======================================
+
+const subItemActual = cargarIdentificacion();
+let modoEdicion = subitemActual?.estado !== "publicado";
+function cargarIdentificacion() {
+    // Obtenemos el ID desde la URL
+    const parametros = new URLSearchParams(
+        window.location.search
+    );
+    const idSubitem = parametros.get("id");
+    // Buscamos el subítem en la base de datos
+    const subitem = subitemsIniciales.find(
+        elemento => elemento.id === idSubitem
+    );
+    // Verificamos que exista
+    if (!subitem) {
+        document.querySelector("main").innerHTML =
+            "<h2>No se encontró el subítem solicitado.</h2>";
+        return;
+    }
+    // Mostramos los datos principales
+    document.getElementById("id").textContent =
+        subitem.id;
+    document.getElementById("unidad").textContent =
+        subitem.unidad;
+    document.getElementById("descripcion").textContent =
+        subitem.descripcion;
+    return subitem;
+}
+
 
 const campos = {
     id: document.getElementById("id"),
@@ -48,101 +86,11 @@ const campos = {
     observaciones: document.getElementById("observaciones")
 };
 
-// ======================================
-// 3. BUSCADOR Y SELECTORES
-// ======================================
-function configurarSelector(
-    base,
-    buscador,
-    selector
-) {
-    function actualizar() {
-    const texto = $(buscador).value.toLowerCase();
-    const filtrados = base.filter(insumo =>
-        insumo.nombre.toLowerCase().includes(texto)
-    );
-    $(selector).innerHTML =
-        '<option value="">Seleccionar...</option>';
-    filtrados.forEach(insumo => {
-        const opcion = document.createElement("option");
-        opcion.value = insumo.id;
-        opcion.textContent =
-        `${insumo.nombre} (${insumo.unidad})`;
-        $(selector).appendChild(opcion);
-    });
-    }
-    $(buscador).addEventListener("input", actualizar);
-    actualizar();
-}
-configurarSelector(
-    materiales,
-    "buscar-material",
-    "select-material"
-);
-configurarSelector(
-    manoObra,
-    "buscar-mano-obra",
-    "select-mano-obra"
-);
-configurarSelector(
-    equipos,
-    "buscar-equipo",
-    "select-equipo"
-);
-// ======================================
-// 4. AGREGAR INSUMOS
-// ======================================
-function agregarInsumo(tipo, selector, cantidad) {
-    if (!modoEdicion) return;
-    const insumoId = $(selector).value;
-    const valor = Number($(cantidad).value);
-    if (!insumoId || !Number.isFinite(valor) || valor <= 0) {
-    alert("Seleccioná un insumo e ingresá una cantidad válida.");
-    return;
-    }
-    const propiedad = {
-    material: "materiales",
-    manoObra: "manoObra",
-    equipo: "equipos"
-    }[tipo];
-    const lista = subitemActual[propiedad];
-    if (lista.some(insumo => insumo.insumoId === insumoId)) {
-    alert("Este insumo ya está agregado.");
-    return;
-    }
-    const nuevoInsumo = {
-    insumoId,
-    [tipo === "manoObra" ? "rendimiento" : "cantidad"]: valor
-    };
-    lista.push(nuevoInsumo);
-    $(cantidad).value = "";
-    $(selector).value = "";
-    renderizarTablas();
-}
-$("agregar-material").addEventListener("click", () =>
-    agregarInsumo(
-    "material",
-    "select-material",
-    "cantidad-material"
-    )
-);
-$("agregar-mano-obra").addEventListener("click", () =>
-    agregarInsumo(
-    "manoObra",
-    "select-mano-obra",
-    "cantidad-mano-obra"
-    )
-);
-$("agregar-equipo").addEventListener("click", () =>
-    agregarInsumo(
-    "equipo",
-    "select-equipo",
-    "cantidad-equipo"
-    )
-);
+
 // ======================================
 // 5. MOSTRAR TABLAS
 // ======================================
+
 function renderizarLista(
     lista,
     base,
@@ -151,172 +99,280 @@ function renderizarLista(
 ) {
     const destino = $(contenedor);
     destino.replaceChildren();
-    if (lista.length === 0) {
-    destino.textContent = "No hay insumos agregados.";
-    return;
+    // Configuración de cada tipo de recurso.
+    const configuracion = {
+        material: {
+            nombre: "materiales",
+            titulo: "No requiere materiales",
+            detalle: "Este subítem no necesita materiales.",
+            pendiente: "Materiales pendientes de cargar",
+            columnas: [
+                "Material",
+                "Unidad",
+                "Cantidad por unidad de subítem",
+                "Unidad comercial"
+            ]
+        },
+        manoObra: {
+            nombre: "mano de obra",
+            titulo: "No requiere mano de obra",
+            detalle: "Este subítem no necesita mano de obra.",
+            pendiente: "Mano de obra pendiente de cargar",
+            columnas: [
+                "Personal",
+                "Unidad",
+                "Rendimiento por unidad de subítem"
+            ]
+        },
+        equipo: {
+            nombre: "equipos",
+            titulo: "No requiere equipos",
+            detalle: "Este subítem no necesita equipos.",
+            pendiente: "Equipos pendientes de cargar",
+            columnas: [
+                "Equipo",
+                "Unidad",
+                "Cantidad por unidad de subítem",
+                "Unidad comercial"
+            ]
+        }
+    };
+    const config = configuracion[tipo];
+    // 1. El recurso no es necesario.
+    if (lista === null) {
+        destino.innerHTML = `
+            <div class="estado-recursos sin-insumos">
+                <span class="icono-estado">✓</span>
+                <div>
+                    <strong>${config.titulo}</strong>
+                    <p>${config.detalle}</p>
+                </div>
+            </div>
+        `;
+        return;
     }
+    // 2. El recurso todavía no fue cargado.
+    if (!Array.isArray(lista) || lista.length === 0) {
+        destino.innerHTML = `
+            <div class="estado-recursos recursos-pendientes">
+                <strong>${config.pendiente}</strong>
+            </div>
+        `;
+        return;
+    }
+    // 3. Construcción de la tabla.
     const tabla = document.createElement("table");
     const encabezado = document.createElement("tr");
-    ["Insumo", "Consumo", "Acciones"].forEach(texto => {
-    const th = document.createElement("th");
-    th.textContent = texto;
-    encabezado.appendChild(th);
+    config.columnas.forEach(texto => {
+        const th = document.createElement("th");
+        th.textContent = texto;
+        encabezado.appendChild(th);
     });
     tabla.appendChild(encabezado);
-    lista.forEach((registro, indice) => {
-    const insumo = base.find(
-        elemento => elemento.id === registro.insumoId
-    );
-    if (!insumo) return;
-    const fila = document.createElement("tr");
-    const nombre = document.createElement("td");
-    nombre.textContent = insumo.nombre;
-    const consumo = document.createElement("td");
-    const cantidad = tipo === "manoObra"
-        ? registro.rendimiento
-        : registro.cantidad;
-    consumo.textContent =
-        `${cantidad} ${insumo.unidad}`;
-    const acciones = document.createElement("td");
-    if (modoEdicion) {
-        const boton = document.createElement("button");
-        boton.textContent = "Quitar";
-        boton.addEventListener("click", () => {
-        lista.splice(indice, 1);
-        renderizarTablas();
-        });
-        acciones.appendChild(boton);
-    }
-    fila.append(nombre, consumo, acciones);
-    tabla.appendChild(fila);
+    // Filas de recursos.
+    lista.forEach(registro => {
+        const insumo = base.find(
+            elemento => elemento.id === registro.insumoId
+        );
+        if (!insumo) return;
+        const fila = document.createElement("tr");
+        const nombre = document.createElement("td");
+        nombre.textContent = insumo.nombre;
+        const unidad = document.createElement("td");
+        unidad.textContent = insumo.unidad;
+        fila.append(nombre, unidad);
+        // Materiales.
+        if (tipo === "material") {
+            const cantidad = document.createElement("td");
+            cantidad.textContent = registro.cantidad;
+            const unidadComercial = document.createElement("td");
+            unidadComercial.textContent =
+                insumo.unidadComercial || "—";
+            fila.append(cantidad, unidadComercial);
+        }
+        // Mano de obra.
+        if (tipo === "manoObra") {
+            const rendimiento = document.createElement("td");
+            rendimiento.textContent = registro.rendimiento;
+            fila.append(rendimiento);
+        }
+        // Equipos.
+        if (tipo === "equipo") {
+            const cantidad = document.createElement("td");
+            cantidad.textContent = registro.cantidad;
+            const unidadComercial = document.createElement("td");
+            unidadComercial.textContent =
+                insumo.unidadComercial || "—";
+            fila.append(cantidad, unidadComercial);
+        }
+        tabla.appendChild(fila);
     });
     destino.appendChild(tabla);
 }
+
+
+// Renderizado general de recursos.
 function renderizarTablas() {
     renderizarLista(
-    subitemActual.materiales,
-    materiales,
-    "tabla-materiales",
-    "material"
+        subitemActual.materiales,
+        materiales,
+        "tabla-materiales",
+        "material"
     );
     renderizarLista(
-    subitemActual.manoObra,
-    manoObra,
-    "tabla-mano-obra",
-    "manoObra"
+        subitemActual.manoObra,
+        manoObra,
+        "tabla-mano-obra",
+        "manoObra"
     );
     renderizarLista(
-    subitemActual.equipos,
-    equipos,
-    "tabla-equipos",
-    "equipo"
+        subitemActual.equipos,
+        equipos,
+        "tabla-equipos",
+        "equipo"
     );
 }
+
+
 // ======================================
 // 6. CARGAR INFORMACIÓN DE LA FICHA
 // ======================================
 
-function cargarFicha() {
 
-  // Información general: solo lectura
+function cargarFicha() {
+    // Información general
     campos.id.textContent = subitemActual.id;
     campos.descripcion.textContent = subitemActual.descripcion;
     campos.unidad.textContent = subitemActual.unidad;
-    campos.item.textContent = subitemActual.item;
-  // Información editable
-    campos.descripcionAmpliada.value =
-    subitemActual.descripcionAmpliada || "";
-    campos.observaciones.value =
-    subitemActual.observaciones || "";
-    $("estado-ficha").textContent =
-    subitemActual.estado === "publicado"
-        ? "Publicado"
-        : "Borrador";
-    $("estado-ficha").className =
-    `badge ${subitemActual.estado}`;
-    renderizarTablas();
-    actualizarModo();
-}
-
-// ======================================
-// 7. BLOQUEAR Y DESBLOQUEAR
-// ======================================
-function actualizarModo() {
-    document.querySelectorAll("main input, main textarea")
-    .forEach(campo => campo.disabled = !modoEdicion);
-    document.querySelectorAll("main select")
-    .forEach(campo => campo.disabled = !modoEdicion);
-    document.querySelectorAll(".selector-grid button")
-    .forEach(boton => boton.disabled = !modoEdicion);
-    $("guardar-borrador").hidden = !modoEdicion;
-    $("publicar-ficha").hidden = !modoEdicion;
-    $("desbloquear-ficha").hidden = modoEdicion;
+    // Información complementaria
+    campos.descripcionAmpliada.textContent =
+        subitemActual.descripcionAmpliada || "Sin descripción ampliada.";
+    campos.observaciones.textContent =
+        subitemActual.observaciones || "Sin observaciones.";
+    // Recursos
     renderizarTablas();
 }
-$("desbloquear-ficha").addEventListener("click", () => {
-    if (!confirm("¿Querés habilitar la edición de esta ficha?")) {
-    return;
-    }
-    modoEdicion = true;
-    subitemActual.estado = "borrador";
-    actualizarModo();
-    actualizarEstado();
-});
-// ======================================
-// 8. GUARDAR INFORMACIÓN
-// ======================================
-function actualizarEstado() {
-    if (subitemActual.id.trim() === "") {
-    alert("El subítem necesita un ID.");
-    return false;
-    }
-    if (!subitemActual.descripcion.trim()) {
-    alert("Ingresá una descripción.");
-    return false;
-    }
-    if (!subitemActual.unidad.trim()) {
-    alert("Ingresá una unidad.");
-    return false;
-    }
-    const indice = subitems.findIndex(
-    s => s.id === subitemActual.id
-    );
-    if (indice >= 0) {
-    subitems[indice] = structuredClone(subitemActual);
-    } else {
-    subitems.push(structuredClone(subitemActual));
-    }
-    localStorage.setItem(CLAVE, JSON.stringify(subitems));
-    return true;
-}
 
-function leerCampos() {
-    subitemActual.descripcionAmpliada =
-    campos.descripcionAmpliada.value.trim();
-    subitemActual.observaciones =
-    campos.observaciones.value.trim();
-}
 
-$("guardar-borrador").addEventListener("click", () => {
-    leerCampos();
-    subitemActual.estado = "borrador";
-    if (actualizarEstado()) {
-    alert("Borrador guardado correctamente.");
-    }
-});
-$("publicar-ficha").addEventListener("click", () => {
-    leerCampos();
-    if (!confirm("¿Publicar y bloquear esta ficha?")) {
-    return;
-    }
-    subitemActual.estado = "publicado";
-    if (actualizarEstado()) {
-    modoEdicion = false;
-    cargarFicha();
-    alert("Ficha publicada y bloqueada correctamente.");
-    }
-});
 // ======================================
 // 9. INICIALIZACIÓN
 // ======================================
 cargarFicha();
+
+// ------------------------------------
+// SECCIÓN: MATERIALES
+// ------------------------------------
+
+// Elementos HTML
+const buscarMaterial = document.getElementById("buscar-material");
+const selectMaterial = document.getElementById("select-material");
+const cantidadMaterial = document.getElementById("cantidad-material");
+const botonAgregarMaterial = document.getElementById("agregar-material");
+const tablaMateriales = document.getElementById("tabla-materiales");
+
+// Materiales asociados al subítem
+let materialesDelSubitem = [...(subitemActual.materiales || [])];
+
+// Buscar un material por su ID
+function obtenerMaterial(id) {
+    return materiales.find(material => material.id === id);
+}
+
+// Actualizar las opciones del selector
+function actualizarSelectorMateriales() {
+    const busqueda = buscarMaterial.value.toLowerCase();
+    const materialesFiltrados = materiales.filter(material =>
+        material.nombre.toLowerCase().includes(busqueda) ||
+        material.id.toLowerCase().includes(busqueda)
+    );
+    selectMaterial.innerHTML = '<option value="">Seleccionar...</option>';
+    materialesFiltrados.forEach(material => {
+        const opcion = document.createElement("option");
+        opcion.value = material.id;
+        opcion.textContent = `${material.id} - ${material.nombre}`;
+        selectMaterial.appendChild(opcion);
+    });
+}
+// Mostrar la tabla de materiales
+function mostrarMateriales() {
+    tablaMateriales.innerHTML = "";
+    if (materialesDelSubitem.length === 0) {
+        tablaMateriales.textContent = "Todavía no hay materiales agregados.";
+        return;
+    }
+    const tabla = document.createElement("table");
+    const encabezado = document.createElement("thead");
+    encabezado.innerHTML = `
+        <tr>
+            <th>Material</th>
+            <th>Unidad</th>
+            <th>Cantidad por unidad</th>
+            <th>Acciones</th>
+        </tr>
+    `;
+    const cuerpo = document.createElement("tbody");
+    materialesDelSubitem.forEach((recurso, indice) => {
+        const material = obtenerMaterial(recurso.insumoId);
+        if (!material) return;
+        const fila = document.createElement("tr");
+        const celdaNombre = document.createElement("td");
+        celdaNombre.textContent = material.nombre;
+        const celdaUnidad = document.createElement("td");
+        celdaUnidad.textContent = material.unidad;
+        const celdaCantidad = document.createElement("td");
+        celdaCantidad.textContent = recurso.cantidad;
+        const celdaAcciones = document.createElement("td");
+        const botonEliminar = document.createElement("button");
+        botonEliminar.type = "button";
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.addEventListener("click", () => {
+            materialesDelSubitem.splice(indice, 1);
+            mostrarMateriales();
+        });
+        celdaAcciones.appendChild(botonEliminar);
+        fila.append(
+            celdaNombre,
+            celdaUnidad,
+            celdaCantidad,
+            celdaAcciones
+        );
+        cuerpo.appendChild(fila);
+    });
+    tabla.append(encabezado, cuerpo);
+    tablaMateriales.appendChild(tabla);
+}
+// Agregar un material al subítem
+function agregarMaterial() {
+    const materialId = selectMaterial.value;
+    const cantidad = Number(cantidadMaterial.value);
+    if (!materialId) {
+        alert("Seleccioná un material.");
+        return;
+    }
+    if (cantidadMaterial.value.trim() === "" ||
+        !Number.isFinite(cantidad) ||
+        cantidad <= 0) {
+        alert("Ingresá una cantidad válida mayor que cero.");
+        return;
+    }
+    const yaExiste = materialesDelSubitem.some(
+        recurso => recurso.insumoId === materialId
+    );
+    if (yaExiste) {
+        alert("Este material ya fue agregado al subítem.");
+        return;
+    }
+    materialesDelSubitem.push({
+        insumoId: materialId,
+        cantidad: cantidad
+    });
+    cantidadMaterial.value = "";
+    selectMaterial.value = "";
+    mostrarMateriales();
+}
+// Eventos
+buscarMaterial.addEventListener("input", actualizarSelectorMateriales);
+botonAgregarMaterial.addEventListener("click", agregarMaterial);
+// Carga inicial
+actualizarSelectorMateriales();
+mostrarMateriales();
