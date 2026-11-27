@@ -41,7 +41,7 @@ function agruparMateriales(lista) {
 // Crea una tabla para cada agrupación
 function crearTabla(lista) {
     const tabla = document.createElement("table");
-    tabla.classList.add("tabla-materiales");
+    tabla.classList.add("tabla", "tabla-materiales");
     const encabezado = document.createElement("thead");
     const filaEncabezado = document.createElement("tr");
     [

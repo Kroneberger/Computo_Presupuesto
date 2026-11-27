@@ -49,7 +49,18 @@ const $ = id => document.getElementById(id);
 // ======================================
 
 const subItemActual = cargarIdentificacion();
-let modoEdicion = subitemActual?.estado !== "publicado";
+
+
+
+function estado () {
+    const estadoText = subItemActual.estado;
+    estadoSubItem.innerText = estadoText;
+    if (subItemActual.estado === "borrador"){
+        estadoSubItem.classList.add("estado-borrador");
+    }
+}
+    
+
 function cargarIdentificacion() {
     // Obtenemos el ID desde la URL
     const parametros = new URLSearchParams(
@@ -60,6 +71,7 @@ function cargarIdentificacion() {
     const subitem = subitemsIniciales.find(
         elemento => elemento.id === idSubitem
     );
+    const estadoSubItem = document.getElementById("estado");
     // Verificamos que exista
     if (!subitem) {
         document.querySelector("main").innerHTML =
@@ -73,6 +85,14 @@ function cargarIdentificacion() {
         subitem.unidad;
     document.getElementById("descripcion").textContent =
         subitem.descripcion;
+    estadoSubItem.textContent = subitem.estado;
+    if (estadoSubItem.textContent == "borrador"){
+        estadoSubItem.classList.add("estado-borrador")
+    }
+    if (estadoSubItem.textContent == "publicado"){
+        estadoSubItem.classList.add("estado-publicado");
+    }
+
     return subitem;
 }
 
@@ -110,7 +130,9 @@ function renderizarLista(
                 "Material",
                 "Unidad",
                 "Cantidad por unidad",
-                "Unidad comercial"
+                "Unidad comercial",
+                "Precio unitario",
+                "Precio parcial"
             ]
         },
         manoObra: {
@@ -121,7 +143,9 @@ function renderizarLista(
             columnas: [
                 "Personal",
                 "Unidad",
-                "Rendimiento por unidad"
+                "Rendimiento por unidad",
+                "Precio unitario",
+                "Precio parcial"
             ]
         },
         equipo: {
@@ -133,6 +157,8 @@ function renderizarLista(
                 "Equipo",
                 "Unidad",
                 "Cantidad por unidad",
+                "Precio unitario",
+                "Precio parcial"
             ]
         }
     };
@@ -187,19 +213,31 @@ function renderizarLista(
             const unidadComercial = document.createElement("td");
             unidadComercial.textContent =
                 insumo.unidadComercial || "—";
-            fila.append(cantidad, unidadComercial);
+            const precioUnitario = document.createElement("td");
+            precioUnitario.textContent = insumo.precio;
+            const precioParcial = document.createElement("td");
+            precioParcial.textContent = insumo.precio * registro.cantidad;
+            fila.append(cantidad, unidadComercial, precioUnitario, precioParcial);
         }
         // Mano de obra.
         if (tipo === "manoObra") {
             const rendimiento = document.createElement("td");
             rendimiento.textContent = registro.rendimiento;
-            fila.append(rendimiento);
+            const precioUnitario = document.createElement("td");
+            precioUnitario.textContent = insumo.salario;
+            const precioParcial = document.createElement("td");
+            precioParcial.textContent = insumo.salario * registro.rendimiento;
+            fila.append(rendimiento, precioUnitario, precioParcial);
         }
         // Equipos.
         if (tipo === "equipo") {
             const cantidad = document.createElement("td");
             cantidad.textContent = registro.cantidad;
-            fila.append(cantidad);
+            const precioUnitario = document.createElement("td");
+            precioUnitario.textContent = insumo.precio;
+            const precioParcial = document.createElement("td");
+            precioParcial.textContent = insumo.precio * registro.cantidad;
+            fila.append(cantidad, precioUnitario, precioParcial);
         }
         tabla.appendChild(fila);
     });
@@ -234,17 +272,14 @@ function renderizarTablas() {
 // 6. CARGAR INFORMACIÓN DE LA FICHA
 // ======================================
 
-
 function cargarFicha() {
     // Información general
     campos.id.textContent = subitemActual.id;
     campos.descripcion.textContent = subitemActual.descripcion;
     campos.unidad.textContent = subitemActual.unidad;
     // Información complementaria
-    campos.descripcionAmpliada.textContent =
-        subitemActual.descripcionAmpliada || "Sin descripción ampliada.";
-    campos.observaciones.textContent =
-        subitemActual.observaciones || "Sin observaciones.";
+    campos.descripcionAmpliada.textContent = subitemActual.descripcionAmpliada || "Sin descripción ampliada.";
+    campos.observaciones.textContent = subitemActual.observaciones || "Sin observaciones.";
     // Recursos
     renderizarTablas();
 }
@@ -372,3 +407,4 @@ botonAgregarMaterial.addEventListener("click", agregarMaterial);
 // Carga inicial
 actualizarSelectorMateriales();
 mostrarMateriales();
+estado();

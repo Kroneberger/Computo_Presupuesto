@@ -22,7 +22,7 @@ function agruparEquipos(lista) {
 // Crea una tabla para cada agrupación
 function crearTabla(lista) {
     const tabla = document.createElement("table");
-    tabla.classList.add("tabla-equipos");
+    tabla.classList.add("tabla", "tabla-equipos");
     const encabezado = document.createElement("thead");
     const filaEncabezado = document.createElement("tr");
     [
@@ -67,7 +67,7 @@ function renderizarEquipos(lista) {
     const agrupaciones = agruparEquipos(lista);
     Object.entries(agrupaciones).forEach(([nombre, elementos]) => {
         const seccion = document.createElement("details");
-        seccion.classList.add("agrupacion");
+        seccion.classList.add("agrupacion", "agrupacion-equipos");
         seccion.open = true;
         const titulo = document.createElement("summary");
         const nombreCategoria = document.createElement("span");

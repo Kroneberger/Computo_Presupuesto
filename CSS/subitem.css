@@ -220,18 +220,18 @@ button:disabled {
     color: white;
 }
 
-.badge {
+.estado {
     padding: 8px 13px;
     border-radius: 20px;
     background: #e4e9ef;
     font-size: 13px;
 }
 
-.badge.publicado {
+.estado-publicado {
     background: #d8f3e2;
     color: #17683a;
 }
-.badge.borrador {
+.estado-borrador {
     background: #fff0d2;
     color: #946000;
 }

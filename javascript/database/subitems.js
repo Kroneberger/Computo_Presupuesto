@@ -1243,6 +1243,257 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
-    
+    {
+        id: "SUB-056",
+        codigo: "12.1.1",
+        descripcion: "Chapa aluminizada Cincalum Nº 25 sobre estructura de madera + Mexpol + Machimbre",
+        unidad: "m²",
+        itemId: "IT-12.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-057",
+        codigo: "12.2.1",
+        descripcion: "Canaleta estándar H°G° Nº 25 (desarrollo 0,33 m)",
+        unidad: "ml",
+        itemId: "IT-12.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-058",
+        codigo: "12.2.2",
+        descripcion: "Canaleta tipo cenefa Hº Gº Nº 25 (desarrollo 0,50m)",
+        unidad: "ml",
+        itemId: "IT-12.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-059",
+        codigo: "12.2.3",
+        descripcion: "Canaleta embutida H°G° Nº 25 (desarrollo 0,50 m)",
+        unidad: "ml",
+        itemId: "IT-12.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-060",
+        codigo: "12.3.1",
+        descripcion: "Tirante de Pino 3x5",
+        unidad: "ml",
+        itemId: "IT-12.3",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-061",
+        codigo: "13.1.1",
+        descripcion: "Yeso suspendido Durlock estandar 12,5mm",
+        unidad: "m²",
+        itemId: "IT-13.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-062",
+        codigo: "13.1.2",
+        descripcion: "Tipo Durlock con placa de yeso resistente a la humedad",
+        unidad: "m²",
+        itemId: "IT-13.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-063",
+        codigo: "13.1.3",
+        descripcion: "Tipo Durlock desmontable placa texturada 606x606",
+        unidad: "m²",
+        itemId: "IT-13.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-064",
+        codigo: "13.1.4",
+        descripcion: "A la cal suspendido",
+        unidad: "m²",
+        itemId: "IT-13.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-065",
+        codigo: "13.1.5",
+        descripcion: "Cielorraso de madera machimbrada",
+        unidad: "m²",
+        itemId: "IT-13.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-066",
+        codigo: "13.2.1",
+        descripcion: "Yeso aplicado bajo losa",
+        unidad: "m²",
+        itemId: "IT-13.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-067",
+        codigo: "13.2.2",
+        descripcion: "A la cal aplicado bajo Losa",
+        unidad: "m²",
+        itemId: "IT-13.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
 
 ];

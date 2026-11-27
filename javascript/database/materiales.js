@@ -6,7 +6,7 @@ export const materiales = [
         unidad: "kg",
         unidadComercial: "Bolsa de 25 kg",
         equivalenciaComercial: 25,
-        precio: null,
+        precio: 11000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -16,7 +16,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 1000 ladrillos",
         equivalenciaComercial: 1000,
-        precio: null,
+        precio: 300,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -26,7 +26,7 @@ export const materiales = [
         unidad: "m³",
         unidadComercial: "Bolson 1m³",
         equivalenciaComercial: 1,
-        precio: null,
+        precio: 40000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -36,7 +36,7 @@ export const materiales = [
         unidad: "kg",
         unidadComercial: "Bolsa de 25 kg",
         equivalenciaComercial: 25,
-        precio: null,
+        precio: 9000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -46,7 +46,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 92 ladrillos",
         equivalenciaComercial: 92,
-        precio: null,
+        precio: 1000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -56,7 +56,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 144 ladrillos",
         equivalenciaComercial: 144,
-        precio: null,
+        precio: 850,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -66,7 +66,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 192 ladrillos",
         equivalenciaComercial: 192,
-        precio: null,
+        precio: 600,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -76,7 +76,7 @@ export const materiales = [
         unidad: "m³",
         unidadComercial: "Bolson 1m³",
         equivalenciaComercial: 1,
-        precio: null,
+        precio: 60000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     }

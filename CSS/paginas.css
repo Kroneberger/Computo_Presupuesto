@@ -209,17 +209,37 @@ table tbody tr:hover {
 /* ADAPTACIÓN A CELULARES */
 
 @media (max-width: 750px) {
-    .panel-materiales {
+    .panel {
         padding: 18px;
     }
     .encabezado-listado {
         align-items: flex-start;
         flex-direction: column;
     }
-    .tabla-materiales {
-        min-width: 750px;
+    .tabla {
+        min-width: 850px;
     }
-    .agrupacion-materiales {
+
+    .tabla-mano-obra {
+        min-width: 625px;
+    }
+
+    .tabla-equipos {
+        min-width: 500px;
+    }
+
+    .agrupacion {
         overflow-x: auto;
+    }
+    .agrupacion summary{
+        min-width: 850px;
+    }
+
+    .agrupacion-mano-obra summary{
+        min-width: 625px;
+    }
+
+    .agrupacion-equipos summary{
+        min-width: 500px;
     }
 }
