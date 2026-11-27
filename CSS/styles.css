@@ -375,38 +375,6 @@ body {
     color: #A9B7C5;
 }
 
-/* =================================
-    7. ADAPTACION A CELULARES
-================================= */
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .logo span {
-        font-size: 14px;
-    }
-    .inicio {
-        min-height: 550px;
-        padding: 60px 7%;
-    }
-    .rubros {
-        padding: 60px 7%;
-    }
-    .rubros-contenedor {
-        grid-template-columns: 1fr;
-    }
-    .titulo-seccion h2 {
-        font-size: 29px;
-    }
-}
 
 /* =================================
     MENU DESPLEGABLE DE RUBROS
@@ -601,24 +569,18 @@ body {
     position: absolute;
     top: calc(100% + 12px);
     left: 0;
-
     min-width: 220px;
     padding: 8px;
-
     background-color: var(--azul-secundario);
     border: 1px solid var(--color-border);
     border-radius: 12px;
-
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
-
     transition: opacity 0.2s ease,
                 transform 0.2s ease,
                 visibility 0.2s ease;
-
     z-index: 100;
 }
 
@@ -661,4 +623,47 @@ body {
 
 .titulo-item-borrado {
     display: none !important; 
+}
+
+
+/* =================================
+    7. ADAPTACION A CELULARES
+================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+    }
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .logo span {
+        font-size: 14px;
+    }
+    .inicio {
+        min-height: 550px;
+        padding: 60px 7%;
+    }
+    .rubros {
+        padding: 60px 7%;
+    }
+    .rubros-contenedor {
+        grid-template-columns: 1fr;
+    }
+    .titulo-seccion h2 {
+        font-size: 29px;
+    }
+
+    .dropdown-menu {
+        min-width: 160px;
+        padding: 4px;
+    }
 }
