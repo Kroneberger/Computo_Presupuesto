@@ -1,0 +1,225 @@
+:root {
+    --fondo-encabezados: #f2f8fa;
+    --fondo-agrupaciones: #e2effa;
+    --fondo-header-1: #1e3a5f;
+    --fondo-header-2: #294a6a;
+    --fondo-fila-1: #f5f8fe;
+    --fondo-fila-2: #fdfdff;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    padding: 2vh 6%;
+    background: linear-gradient(
+        135deg,
+        var(--fondo-header-1),
+        var(--fondo-header-2)
+    ); 
+    color: white;
+}
+
+.contenedor {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.contenedor-materiales {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.contenedor-equipos {
+    width: min(1000px, 80%);
+    margin: 0 auto;
+}
+
+.encabezado h1 {
+    margin: 25px 0 8px;
+    font-size: 2rem;
+}
+
+.encabezado p {
+    margin: 0;
+    color: #d5dde3;
+}
+
+/* CONTENIDO */
+
+.panel {
+    margin: 35px 0;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #e2e6e9;
+    border-radius: 10px;
+}
+
+.encabezado-listado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.encabezado-listado h2 {
+    margin: 0 0 5px;
+    font-size: 1.35rem;
+}
+
+.encabezado-listado p {
+    margin: 0;
+    color: #687580;
+    font-size: 0.9rem;
+}
+
+#cantidad-materiales {
+    color: #687580;
+    font-size: 0.85rem;
+}
+
+
+/* BUSCADOR */
+
+.buscador {
+    margin-bottom: 25px;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d8dee3;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.buscador input:focus {
+    border-color: #52758f;
+    box-shadow: 0 0 0 3px rgba(82, 117, 143, 0.12);
+}
+
+
+/* AGRUPACIONES */
+
+.agrupacion {
+    margin-bottom: 15px;
+    border: 1px solid #e0e5e9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.agrupacion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 18px;
+    background-color: var(--fondo-agrupaciones);
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+
+.agrupacion summary::-webkit-details-marker {
+    display: none;
+}
+
+.agrupacion summary::before {
+    content: "+";
+    margin-right: 5px;
+    color: #526d80;
+}
+
+.agrupacion[open] summary::before {
+    content: "−";
+}
+
+.cantidad-agrupacion {
+    margin-left: auto;
+    color: #78838c;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+/* TABLA */
+
+.tabla-materiales {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.tabla-equipos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.tabla-equipos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.tabla-materiales th,
+.tabla-materiales td {
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9edef;
+}
+
+.tabla-materiales th {
+    background-color: var(--fondo-encabezados);
+    color: #66737d;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.tabla-materiales tbody tr:last-child td {
+    border-bottom: none;
+}
+table tbody tr:nth-child(odd) {
+    background-color: var(--fondo-fila-1);
+}
+table tbody tr:nth-child(even) {
+    background-color: var(--fondo-fila-2);
+}
+/* Transición suave al pasar el mouse */
+table tbody tr {
+    transition: background-color 0.2s ease;
+}
+table tbody tr:hover {
+    background-color: #e8eff8;
+}
+
+.precio-pendiente {
+    color: #a36b20;
+    font-size: 0.82rem;
+}
+
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 750px) {
+    .panel-materiales {
+        padding: 18px;
+    }
+    .encabezado-listado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .tabla-materiales {
+        min-width: 750px;
+    }
+    .agrupacion-materiales {
+        overflow-x: auto;
+    }
+}

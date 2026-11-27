@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de equipos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/subitem.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/paginas.css">
+</head>
+<body>
+    <header class="encabezado encabezado-materiales">
+        <div class="contenedor contenedor-equipos">
+            <a href="../index.html" class="back-link">
+                ← Volver al inicio
+            </a>
+            <h1>Biblioteca de equipos</h1>
+            <p>
+                Consulta de equipos, unidades de utilización y recursos disponibles.
+            </p>
+        </div>
+    </header>
+    <main class="contenedor contenedor-equipos">
+        <section class="panel panel-equipos">
+            <div class="encabezado-listado">
+                <div>
+                    <h2>Listado de equipos</h2>
+                    <p>Equipos organizados por agrupación.</p>
+                </div>
+                <span id="cantidad-equipos"></span>
+            </div>
+            <div class="buscador">
+                <input type="search" id="buscar-equipo" placeholder="Buscar equipo..." autocomplete="off"
+                >
+            </div>
+            <div id="lista-agrupaciones"></div>
+        </section>
+    </main>
+    <script type="module" src="../javascript/equipos.js"></script>
+</body>
+</html>

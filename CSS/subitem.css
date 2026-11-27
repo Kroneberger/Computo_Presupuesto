@@ -67,14 +67,11 @@
 
     /* Ancho máximo */
     --container-width: 1400px;
-
-
     --color-apu: #2563eb;
     --color-materiales: #10b981;
     --color-mano-obra: #f59e0b;
     --color-equipos: #8b5cf6;
     --color-subitem: #0f172a;
-
     --color-header: #1e3a5f;
     --color-white: #ffffff;
     --back-bg-hover: rgba(255,255,255,.12);
@@ -92,7 +89,7 @@
     padding: 0;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto";
     background: var(--color-bg);
     color: var(--color-text);
 }
@@ -342,18 +339,207 @@ th {
 }
 
 
+/* =========================================
+    ESTILO DE FICHAS TÉCNICAS
+========================================= */
+
+/* Paneles generales */
+
+.panel {
+    background: var(--color-card);
+    padding: 26px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+}
+
+.panel h3 {
+    color: var(--color-primary);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+/* =========================================
+    IDENTIFICACIÓN
+========================================= */
+
+.panel-identificacion {
+    border-top: 3px solid var(--color-primary);
+}
+
+.panel-identificacion .dato-fijo {
+    background: #f5f7fa;
+    border: 1px solid #e1e7ee;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 48px;
+    margin-top: 7px;
+    color: var(--color-text);
+}
+
+/* Código e identificación */
+
+#id {
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: #edf3f9;
+    border-color: #d5e1ed;
+}
+
+/* Unidad */
+
+#unidad {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Descripción */
+
+#descripcion {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
 
 
+/* =========================================
+    RECURSOS
+========================================= */
 
-#tabla-materiales {
+.panel-recursos {
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-recursos h3 {
+    display: flex;
+    align-items: center;
+}
+
+/* Colores de identificación */
+
+.panel-materiales {
     border-left: 4px solid var(--color-materiales);
 }
 
-#tabla-mano-obra {
+.panel-mano-obra {
     border-left: 4px solid var(--color-mano-obra);
 }
 
-#tabla-equipos {
+.panel-equipos {
     border-left: 4px solid var(--color-equipos);
 }
 
+/* Contenedores de tablas */
+
+#tabla-materiales,
+#tabla-mano-obra,
+#tabla-equipos {
+    border-radius: 8px;
+    overflow-x: auto;
+    background: #fafbfd;
+    padding: 8px;
+}
+
+/* Tablas */
+
+.panel-recursos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+
+.panel-recursos th {
+    background: #edf1f6;
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 13px;
+}
+
+.panel-recursos td {
+    padding: 13px;
+    font-size: 14px;
+    color: var(--color-text);
+    border-bottom: 1px solid #e8edf2;
+}
+
+/* Filas intercaladas */
+
+.panel-recursos tbody tr:nth-child(even) {
+    background: #f5f7fa;
+}
+
+.panel-recursos tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* Efecto al pasar el mouse */
+
+.panel-recursos tbody tr:hover {
+    background: #edf3f9;
+    transition: background .2s ease;
+}
+
+
+/* =========================================
+    INFORMACIÓN COMPLEMENTARIA
+========================================= */
+
+.panel-complementaria {
+    background: #f8fafc;
+    border: 1px solid var(--color-border-light);
+}
+
+.panel-complementaria h3 {
+    color: var(--color-text-muted);
+}
+
+.panel-complementaria label {
+    margin-bottom: 20px;
+}
+
+.panel-complementaria p {
+    background: white;
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 8px;
+    min-height: 45px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+
+/* =========================================
+    RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .panel {
+        padding: 18px;
+    }
+
+    .panel-recursos {
+        padding: 15px;
+    }
+
+    .panel-recursos table {
+        min-width: 500px;
+    }
+
+    .dato-fijo {
+        font-size: 14px;
+    }
+}

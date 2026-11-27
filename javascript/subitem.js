@@ -109,7 +109,7 @@ function renderizarLista(
             columnas: [
                 "Material",
                 "Unidad",
-                "Cantidad por unidad de subítem",
+                "Cantidad por unidad",
                 "Unidad comercial"
             ]
         },
@@ -121,7 +121,7 @@ function renderizarLista(
             columnas: [
                 "Personal",
                 "Unidad",
-                "Rendimiento por unidad de subítem"
+                "Rendimiento por unidad"
             ]
         },
         equipo: {
@@ -132,8 +132,7 @@ function renderizarLista(
             columnas: [
                 "Equipo",
                 "Unidad",
-                "Cantidad por unidad de subítem",
-                "Unidad comercial"
+                "Cantidad por unidad",
             ]
         }
     };
@@ -200,10 +199,7 @@ function renderizarLista(
         if (tipo === "equipo") {
             const cantidad = document.createElement("td");
             cantidad.textContent = registro.cantidad;
-            const unidadComercial = document.createElement("td");
-            unidadComercial.textContent =
-                insumo.unidadComercial || "—";
-            fila.append(cantidad, unidadComercial);
+            fila.append(cantidad);
         }
         tabla.appendChild(fila);
     });

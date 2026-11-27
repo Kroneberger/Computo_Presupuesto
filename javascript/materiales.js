@@ -45,6 +45,7 @@ function crearTabla(lista) {
     const encabezado = document.createElement("thead");
     const filaEncabezado = document.createElement("tr");
     [
+        "Codigo",
         "Material",
         "Unidad",
         "Unidad comercial",
@@ -62,6 +63,7 @@ function crearTabla(lista) {
     lista.forEach(material => {
         const fila = document.createElement("tr");
         const datos = [
+            material.id,
             material.nombre,
             material.unidad,
             material.unidadComercial,
@@ -98,7 +100,7 @@ function renderizarMateriales(lista) {
     const agrupaciones = agruparMateriales(lista);
     Object.entries(agrupaciones).forEach(([nombre, elementos]) => {
         const seccion = document.createElement("details");
-        seccion.classList.add("agrupacion-materiales");
+        seccion.classList.add("agrupacion");
         seccion.open = true;
         const titulo = document.createElement("summary");
         const nombreCategoria = document.createElement("span");
@@ -119,9 +121,11 @@ function buscarMateriales() {
         .trim()
         .toLowerCase();
     const resultados = materiales.filter(material => {
+        const id = material.id.toLowerCase();
         const nombre = material.nombre.toLowerCase();
         const agrupacion = (material.agrupacion || "").toLowerCase();
-        return nombre.includes(busqueda) ||
+        return  id.includes(busqueda) ||
+                nombre.includes(busqueda) ||
                 agrupacion.includes(busqueda);
     });
     renderizarMateriales(resultados);

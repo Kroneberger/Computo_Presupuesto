@@ -446,5 +446,803 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    {
+        id: "SUB-020",
+        codigo: "5.1",
+        descripcion: "Tabique Simple  95mm - Tipo Durlock placa de yeso de 12,5 mm",
+        unidad: "m²",
+        itemId: "IT-05",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-021",
+        codigo: "6.1",
+        descripcion: "Cajón hidrófugo para muro de 0,30 (incluye 2 hiladas de ladrillo común)",
+        unidad: "ml",
+        itemId: "IT-06",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-022",
+        codigo: "6.2",
+        descripcion: "Cajón hidrófugo para muro de 0,20 (incluye 2 hiladas de ladrillo común)",
+        unidad: "ml",
+        itemId: "IT-06",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-023",
+        codigo: "6.3",
+        descripcion: "Cajón hidrófugo para muro de 0,15 y 0,10 (incluye 2 hiladas de ladrillo común)",
+        unidad: "ml",
+        itemId: "IT-06",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-024",
+        codigo: "6.4",
+        descripcion: "Capa aisladora vertical con hidrófugo incorporado",
+        unidad: "m²",
+        itemId: "IT-06",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-025",
+        codigo: "6.5",
+        descripcion: "Infiltracion de bloqueador hidrostatico en muros macizos con humedad de cimientos",
+        unidad: "m²",
+        itemId: "IT-06",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "Incluye picado de revoque y reparacion final de los mismos",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-026",
+        codigo: "7.1",
+        descripcion: "Revoque interior completo a la cal",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-027",
+        codigo: "7.2",
+        descripcion: "Revoque exterior completo a la cal",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-028",
+        codigo: "7.3",
+        descripcion: "Azotado de concreto con hidrófugo incorporado",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-029",
+        codigo: "7.4",
+        descripcion: "Grueso a la cal bajo fino interior",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-030",
+        codigo: "7.5",
+        descripcion: "Grueso a la cal bajo fino exterior",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-031",
+        codigo: "7.6",
+        descripcion: "Grueso reforzado bajo revestimiento cerámico",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-032",
+        codigo: "7.7",
+        descripcion: "Fino al fieltro interior",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-033",
+        codigo: "7.8",
+        descripcion: "Fino al fieltro exterior",
+        unidad: "m²",
+        itemId: "IT-07",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1.5},
+            {insumoId: "MAT-003", cantidad: 1.5},
+            {insumoId: "MAT-004", cantidad: 1.5},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-034",
+        codigo: "8.1",
+        descripcion: "Contrapiso s/ terreno natural espesor: 12 cm",
+        unidad: "m²",
+        itemId: "IT-08",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+            {insumoId: "MAT-008", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-035",
+        codigo: "8.2",
+        descripcion: "Contrap.s/T.N esp: 12 cm (con barrera de vapor: Nylon-200 micrones)",
+        unidad: "m²",
+        itemId: "IT-08",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+            {insumoId: "MAT-008", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-036",
+        codigo: "8.3",
+        descripcion: "Contrapiso armado sobre  terreno natural -  esp: 15 cm",
+        unidad: "m²",
+        itemId: "IT-08",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+            {insumoId: "MAT-008", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-037",
+        codigo: "8.4",
+        descripcion: "Carpeta de concreto bajo piso",
+        unidad: "m²",
+        itemId: "IT-08",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+            {insumoId: "MAT-008", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-038",
+        codigo: "8.5",
+        descripcion: "Contrapiso s/ terreno natural espesor: 10 cm",
+        unidad: "m²",
+        itemId: "IT-08",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+            {insumoId: "MAT-008", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-039",
+        codigo: "9.1",
+        descripcion: "Revestimiento de zulejos 15x15",
+        unidad: "m²",
+        itemId: "IT-09",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-040",
+        codigo: "9.2",
+        descripcion: "Revestimiento de azulejos 10x20",
+        unidad: "m²",
+        itemId: "IT-09",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-041",
+        codigo: "9.3",
+        descripcion: "Revestimiento ceramico 40x40",
+        unidad: "m²",
+        itemId: "IT-09",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-042",
+        codigo: "10.1.1",
+        descripcion: "Mosaico granitico 40x40 fondo gris",
+        unidad: "m²",
+        itemId: "IT-10.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-043",
+        codigo: "10.1.2",
+        descripcion: "Mosaico granitico 30x30 fondo gris",
+        unidad: "m²",
+        itemId: "IT-10.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-044",
+        codigo: "10.1.3",
+        descripcion: "Piso baldosa ceramica 40x40",
+        unidad: "m²",
+        itemId: "IT-10.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-045",
+        codigo: "10.1.4",
+        descripcion: "Piso baldosa ceramica 50x50",
+        unidad: "m²",
+        itemId: "IT-10.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-046",
+        codigo: "10.1.5",
+        descripcion: "Piso baldosa ceramica 60x60",
+        unidad: "m²",
+        itemId: "IT-10.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-047",
+        codigo: "10.1.6",
+        descripcion: "Piso flotante 8mm espesor",
+        unidad: "m²",
+        itemId: "IT-10.1",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-048",
+        codigo: "10.2.1",
+        descripcion: "Baldoson Hormigon 60x60",
+        unidad: "m²",
+        itemId: "IT-10.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-049",
+        codigo: "10.2.2",
+        descripcion: "Pavimento intertrabado de adoquines de hormigón",
+        unidad: "m²",
+        itemId: "IT-10.2",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-050",
+        codigo: "10.3.1",
+        descripcion: "Zocalo Porcelanato 60x8",
+        unidad: "ml",
+        itemId: "IT-10.3",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-051",
+        codigo: "10.3.2",
+        descripcion: "Zocalo Porcelanato 50x8",
+        unidad: "ml",
+        itemId: "IT-10.3",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-052",
+        codigo: "10.3.3",
+        descripcion: "Zocalo Porcelanato 40x8",
+        unidad: "ml",
+        itemId: "IT-10.3",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-053",
+        codigo: "10.3.4",
+        descripcion: "Zocalo MDF blanco",
+        unidad: "ml",
+        itemId: "IT-10.3",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+            {insumoId: "MAT-003", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-054",
+        codigo: "11.1",
+        descripcion: "Mesada de Granito Natural",
+        unidad: "m²",
+        itemId: "IT-11",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    {
+        id: "SUB-055",
+        codigo: "11.2",
+        descripcion: "Mesada de marmol",
+        unidad: "m²",
+        itemId: "IT-11",
+
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 1},
+        ],
+        manoObra: [
+            {insumoId: "MO-001",rendimiento: 0.80},
+            {insumoId: "MO-002",rendimiento: .8},
+        ],
+        equipos: [
+            {insumoId: "EQ-001", cantidad: 0.70},
+        ],
+        descripcionAmpliada: "",
+        observaciones: "",
+        estado: "borrador"
+    },
+    
 
 ];

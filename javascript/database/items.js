@@ -64,8 +64,8 @@ export const rubros = [
         nombre: "Tabiqueria",
         items: [
             {
-                id: "IT-05.1",
-                codigo: "5.1",
+                id: "IT-05",
+                codigo: "5",
                 nombre: "Tabiqueria"
             },
         ]
@@ -75,8 +75,8 @@ export const rubros = [
         nombre: "Aislaciones",
         items: [
             {
-                id: "IT-06.1",
-                codigo: "6.1",
+                id: "IT-06",
+                codigo: "6",
                 nombre: "Capas aisladoras"
             },
         ]
@@ -86,15 +86,10 @@ export const rubros = [
         nombre: "Revoques",
         items: [
             {
-                id: "IT-07.1",
-                codigo: "7.1",
-                nombre: "Revoques completos"
+                id: "IT-07",
+                codigo: "7",
+                nombre: "Revoques"
             },
-            {
-                id: "IT-07.2",
-                codigo: "7.2",
-                nombre: "Revoques generales"
-            }
         ]
     },
         {
@@ -102,15 +97,10 @@ export const rubros = [
         nombre: "Carpetas y contrapisos",
         items: [
             {
-                id: "IT-08.1",
-                codigo: "8.1",
-                nombre: "Armados"
+                id: "IT-08",
+                codigo: "8",
+                nombre: "Contrapisos y carpetas"
             },
-            {
-                id: "IT-08.1",
-                codigo: "8.1",
-                nombre: "Sin armar"
-            }
         ]
     },
         {
@@ -118,9 +108,9 @@ export const rubros = [
         nombre: "Revestimientos",
         items: [
             {
-                id: "IT-09.1",
-                codigo: "9.1",
-                nombre: "Revestimientos ceramicos"
+                id: "IT-09",
+                codigo: "9",
+                nombre: "Revestimientos"
             },
         ]
     },
@@ -141,12 +131,7 @@ export const rubros = [
             {
                 id: "IT-10.3",
                 codigo: "10.3",
-                nombre: "Umbrales"
-            },
-            {
-                id: "IT-10.4",
-                codigo: "10.4",
-                nombre: "Zocalos"
+                nombre: "Zocalos y umbrales"
             },
         ]
     },
@@ -155,8 +140,8 @@ export const rubros = [
         nombre: "Marmoleria",
         items: [
             {
-                id: "IT-11.1",
-                codigo: "11.1",
+                id: "IT-11",
+                codigo: "11",
                 nombre: "Marmoleria"
             },
         ]
@@ -264,9 +249,9 @@ export const rubros = [
         nombre: "Cristales y espejos",
         items: [
             {
-                id: "IT-20.1",
-                codigo: "20.1",
-                nombre: "Generales"
+                id: "IT-20",
+                codigo: "20",
+                nombre: "Cristales y espejos"
             },
         ]
     },
@@ -275,9 +260,9 @@ export const rubros = [
         nombre: "Pinturas",
         items: [
             {
-                id: "IT-21.1",
-                codigo: "21.1",
-                nombre: "Pinturas en muros"
+                id: "IT-21",
+                codigo: "21",
+                nombre: "Pinturas"
             },
         ]
     },

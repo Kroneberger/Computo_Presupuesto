@@ -1,27 +1,18 @@
-
 /* =================================
-   COMPUTO Y PRESUPUESTO
-   Archivo principal de JavaScript
+    COMPUTO Y PRESUPUESTO
+    Archivo principal de JavaScript
 ================================= */
-
 
 // En esta sección incorporaremos las
 // funciones generales de la página.
 
-
-// Próximamente:
-// - Menús desplegables.
-// - Navegación dinámica.
-// - Carga de rubros.
-
-/* =================================
-   COMPUTO Y PRESUPUESTO
-   MENU DESPLEGABLE DE RUBROS
+/* ================================
+    COMPUTO Y PRESUPUESTO
+    MENU DESPLEGABLE DE RUBROS
 ================================= */
 
-
 /* =================================
-   1. BASE DE DATOS DE PRUEBA
+    1. BASE DE DATOS DE PRUEBA
 ================================= */
 import { rubros } from "./database/items.js";
 import { subitemsIniciales } from "./database/subitems.js";
@@ -29,10 +20,6 @@ import { subitemsIniciales } from "./database/subitems.js";
 /* =================================
     2. GENERAR LISTA DE ITEMS
     ================================= */
-    
-    
-const CLAVE_SUBITEMS = "bibliotecaSubitems";
-
 function obtenerSubitems() {
     return subitemsIniciales;
 }
@@ -61,6 +48,9 @@ function generarItems(rubro, contenedor) {
         // Creamos el título
         const titulo = document.createElement("h4");
         titulo.textContent = `${item.codigo} ${item.nombre}`;
+        if (item.codigo.length < 3){
+            titulo.classList.add("titulo-item-borrado");
+        }
         // Creamos la lista de subítems
         const lista = document.createElement("ul");
         lista.classList.add("lista-subitems");
