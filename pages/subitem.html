@@ -17,11 +17,16 @@
 </header>
 <main class="container">
     <div class="page-heading">
-        <div>
-            <h2>Ficha técnica del subítem</h2>
-            <p>Información e insumos del subitem. Materiales, mano de obra y equipos. <small>Posteriormente se realizara un Analisis de precio unitario </small></p>
-        </div>
+    <div>
+        <h2>Ficha técnica del subítem</h2>
+        <p>
+            Información e insumos del subitem.Materiales, mano de obra y equipos.
+        </p>
     </div>
+    <div class="estado-container">
+        <span id="estado" class="estado"></span>
+    </div>
+</div>
     <!-- IDENTIFICACIÓN -->
     <section class="panel panel-identificacion">
         <h3>01. Identificación del subítem</h3>
@@ -37,10 +42,6 @@
             <div class="campo-descripcion">
                 <label>Descripción</label>
                 <p id="descripcion" class="dato-fijo"></p>
-            </div>
-            <div >
-                <label>Estado</label>
-                <p id="estado"></p>
             </div>
         </div>
     </section>
@@ -59,19 +60,20 @@
         <h3>04. Equipos</h3>
         <div id="tabla-equipos"></div>
     </section>
+    <!--ANALISIS DE PRECIO UNITARIO-->
+    <section class="panel panel-apu">
+        <h3>05. Analisis de precio unitario</h3>
+        <div id="tabla-apu"></div>
+    </section>
     <!-- INFORMACIÓN COMPLEMENTARIA -->
     <section class="panel panel-complementaria">
-        <h3>05. Información complementaria</h3>
+        <h3>06. Información complementaria</h3>
         <label>Descripción ampliada:
             <p id="descripcion-ampliada"></p>
         </label>
         <label>Observaciones:
             <p id="observaciones"></p>
         </label>
-    </section>
-    <section class="panel panel-apu">
-        <h3>06. Analisis de precio unitario</h3>
-        <div id="tabla-apu"></div>
     </section>
     <!-- ACCIONES -->
     <section class="actions">

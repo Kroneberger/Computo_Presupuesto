@@ -7,8 +7,13 @@
     --gris-borde: #DCE2E8;
     --blanco: #FFFFFF;
     --azul-oscuro-texto:#253247;
+    --borrador-fondo: #f1eee9;
+    --borrador-texto: #504b32;
+    --borrador-borde: #d4bdb2;
+    --publicado-fondo: #dcfce7;
+    --publicado-texto: #166534;
+    --publicado-borde: #bbf7d0;
 }
-
 
 /*Codigo de Copilot*/
 
@@ -220,21 +225,6 @@ button:disabled {
     color: white;
 }
 
-.estado {
-    padding: 8px 13px;
-    border-radius: 20px;
-    background: #e4e9ef;
-    font-size: 13px;
-}
-
-.estado-publicado {
-    background: #d8f3e2;
-    color: #17683a;
-}
-.estado-borrador {
-    background: #fff0d2;
-    color: #946000;
-}
 .selector-grid {
     align-items: end;
     margin-bottom: 22px;
@@ -522,6 +512,142 @@ th {
 
 
 /* =========================================
+   06. ANALISIS DE PRECIO UNITARIO
+========================================= */
+
+/* Contenedor general del APU */
+
+.panel-apu {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 3px solid var(--color-apu);
+}
+
+/* Subtítulos: costo directo e indirecto */
+
+#tabla-apu h4 {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin: 28px 0 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#tabla-apu h4:first-child {
+    margin-top: 10px;
+}
+
+/* Tablas del APU */
+
+#tabla-apu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+/* Celdas */
+
+#tabla-apu td,
+#tabla-apu th {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Importes alineados a la derecha */
+
+#tabla-apu td:last-child,
+#tabla-apu th:last-child {
+    text-align: right;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Filas intercaladas */
+
+#tabla-apu tbody tr:nth-child(even) {
+    background: #f5f7fa;
+}
+
+#tabla-apu tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* Filas de subtotales */
+
+#tabla-apu tr:has(th) {
+    background: #eaf0f7;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+#tabla-apu tr:has(th) th {
+    border-top: 1px solid #d5dfeb;
+    border-bottom: 2px solid #d5dfeb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Precio unitario final */
+
+#tabla-apu h3 {
+    margin-top: 25px;
+    padding: 20px;
+    background: #eaf1f9;
+    border: 1px solid #d5e1ed;
+    border-left: 4px solid var(--color-apu);
+    border-radius: 8px;
+    color: var(--color-primary);
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ESTADO DE PUBLICACIÓN DEL SUBÍTEM
+========================================= */
+
+.page-heading {
+    align-items: center;
+}
+
+.estado-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.estado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Estado publicado */
+.estado-publicado {
+    background: var(--publicado-fondo);
+    color: var(--publicado-texto);
+    border: 1px solid var(--publicado-borde);
+}
+/* Estado borrador */
+.estado-borrador {
+    background: var(--borrador-fondo);
+    color: var(--borrador-texto);
+    border: 1px solid var(--borrador-borde);
+}
+
+strong {
+    font-weight: 900;
+}
+
+/* =========================================
     RESPONSIVE
 ========================================= */
 
@@ -542,4 +668,30 @@ th {
     .dato-fijo {
         font-size: 14px;
     }
+
+    .panel-apu {
+        width: 100%;
+    }
+
+    #tabla-apu td,
+    #tabla-apu th {
+        padding: 11px 9px;
+        font-size: 13px;
+    }
+
+    #tabla-apu h3 {
+        font-size: 16px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+    }
+
+    .estado {
+        padding: 10px 12px;
+        font-size: 13px;
+        border-radius: 15px;
+    }
 }
+
+

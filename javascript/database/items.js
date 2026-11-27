@@ -155,6 +155,16 @@ export const rubros = [
                 codigo: "12.1",
                 nombre: "Cubiertas completas"
             },
+            {
+                id: "IT-12.2",
+                codigo: "12.2",
+                nombre: "Zingueria"
+            },
+            {
+                id: "IT-12.3",
+                codigo: "12.3",
+                nombre: "Tiranteria"
+            },
         ]
     },
         {

@@ -3,6 +3,7 @@ import { materiales } from "./database/materiales.js";
 import { manoObra } from "./database/manodeobra.js";
 import { equipos } from "./database/equipos.js";
 import { subitemsIniciales } from "./database/subitems.js";
+import { calcularAPU } from "./apu.js";
 
 
 let subitems = structuredClone(subitemsIniciales);
@@ -85,14 +86,16 @@ function cargarIdentificacion() {
         subitem.unidad;
     document.getElementById("descripcion").textContent =
         subitem.descripcion;
-    estadoSubItem.textContent = subitem.estado;
-    if (estadoSubItem.textContent == "borrador"){
-        estadoSubItem.classList.add("estado-borrador")
-    }
-    if (estadoSubItem.textContent == "publicado"){
-        estadoSubItem.classList.add("estado-publicado");
-    }
-
+    // Mostrar estado del subítem
+    estadoSubItem.textContent =
+        subitem.estado.toUpperCase();
+    estadoSubItem.classList.remove(
+        "estado-borrador",
+        "estado-publicado"
+    );
+    estadoSubItem.classList.add(
+        `estado-${subitem.estado}`
+    );
     return subitem;
 }
 
@@ -205,6 +208,11 @@ function renderizarLista(
         nombre.textContent = insumo.nombre;
         const unidad = document.createElement("td");
         unidad.textContent = insumo.unidad;
+        const formatoMoneda = new Intl.NumberFormat("es-AR", {
+        style: "currency",
+        currency: "ARS",
+        minimumFractionDigits: 2
+        });
         fila.append(nombre, unidad);
         // Materiales.
         if (tipo === "material") {
@@ -214,9 +222,9 @@ function renderizarLista(
             unidadComercial.textContent =
                 insumo.unidadComercial || "—";
             const precioUnitario = document.createElement("td");
-            precioUnitario.textContent = insumo.precio;
+            precioUnitario.textContent = formatoMoneda.format(insumo.precio);
             const precioParcial = document.createElement("td");
-            precioParcial.textContent = insumo.precio * registro.cantidad;
+            precioParcial.textContent = formatoMoneda.format(insumo.precio * registro.cantidad);
             fila.append(cantidad, unidadComercial, precioUnitario, precioParcial);
         }
         // Mano de obra.
@@ -224,9 +232,9 @@ function renderizarLista(
             const rendimiento = document.createElement("td");
             rendimiento.textContent = registro.rendimiento;
             const precioUnitario = document.createElement("td");
-            precioUnitario.textContent = insumo.salario;
+            precioUnitario.textContent = formatoMoneda.format(insumo.salario);
             const precioParcial = document.createElement("td");
-            precioParcial.textContent = insumo.salario * registro.rendimiento;
+            precioParcial.textContent = formatoMoneda.format(insumo.salario * registro.rendimiento);
             fila.append(rendimiento, precioUnitario, precioParcial);
         }
         // Equipos.
@@ -234,9 +242,9 @@ function renderizarLista(
             const cantidad = document.createElement("td");
             cantidad.textContent = registro.cantidad;
             const precioUnitario = document.createElement("td");
-            precioUnitario.textContent = insumo.precio;
+            precioUnitario.textContent = formatoMoneda.format(insumo.precio);
             const precioParcial = document.createElement("td");
-            precioParcial.textContent = insumo.precio * registro.cantidad;
+            precioParcial.textContent = formatoMoneda.format(insumo.precio * registro.cantidad);
             fila.append(cantidad, precioUnitario, precioParcial);
         }
         tabla.appendChild(fila);
@@ -269,6 +277,80 @@ function renderizarTablas() {
 
 
 // ======================================
+// 7. ANÁLISIS DE PRECIO UNITARIO
+// ======================================
+
+function renderizarAPU() {
+    // Calculamos el APU del subítem actual
+    const resultado = calcularAPU(
+        subitemActual,
+        materiales,
+        manoObra,
+        equipos
+    );
+    // Contenedor HTML
+    const destino = $("tabla-apu");
+    // Formato monetario
+    const formatoMoneda = new Intl.NumberFormat("es-AR", {
+        style: "currency",
+        currency: "ARS",
+        minimumFractionDigits: 2
+    });
+    // Mostrar resultados
+    destino.innerHTML = `
+        <h4>Costo directo</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Materiales</td>
+                    <td>${formatoMoneda.format(resultado.costoMateriales)}</td>
+                </tr>
+                <tr>
+                    <td>Mano de obra</td>
+                    <td>${formatoMoneda.format(resultado.costoManoObra)}</td>
+                </tr>
+                <tr>
+                    <td>Equipos</td>
+                    <td>${formatoMoneda.format(resultado.costoEquipos)}</td>
+                </tr>
+                <tr>
+                    <th>COSTO DIRECTO</th>
+                    <th>${formatoMoneda.format(resultado.costoDirecto)}</th>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Costo indirecto</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Beneficio (12,5%)</td>
+                    <td>${formatoMoneda.format(resultado.beneficio)}</td>
+                </tr>
+                <tr>
+                    <td>Gastos generales (15%)</td>
+                    <td>${formatoMoneda.format(resultado.gastosGenerales)}</td>
+                </tr>
+                <tr>
+                    <td>Gastos financieros (5%)</td>
+                    <td>${formatoMoneda.format(resultado.gastosFinancieros)}</td>
+                </tr>
+                <tr>
+                    <th>COSTO INDIRECTO</th>
+                    <th>${formatoMoneda.format(resultado.costoIndirecto)}</th>
+                </tr>
+            </tbody>
+        </table>
+        <h3>
+            PRECIO UNITARIO:<strong>
+            ${formatoMoneda.format(resultado.precioUnitario)}
+            / ${subitemActual.unidad}</strong>
+        </h3>
+    `;
+}
+
+
+
+// ======================================
 // 6. CARGAR INFORMACIÓN DE LA FICHA
 // ======================================
 
@@ -289,7 +371,7 @@ function cargarFicha() {
 // 9. INICIALIZACIÓN
 // ======================================
 cargarFicha();
-
+renderizarAPU();
 // ------------------------------------
 // SECCIÓN: MATERIALES
 // ------------------------------------
