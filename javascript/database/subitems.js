@@ -132,7 +132,11 @@ export const subitemsIniciales = [
         unidad: "m³",
         itemId: "IT-03.1",
 
-        materiales: null,
+        materiales: [
+            {insumoId: "MAT-001", cantidad: 300},
+            {insumoId: "MAT-003", cantidad: 0.600},
+            {insumoId: "MAT-007", cantidad: 0.750},
+        ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80}
         ],
@@ -153,9 +157,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -178,9 +182,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -203,9 +207,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -228,9 +232,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -253,9 +257,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -278,9 +282,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -303,9 +307,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -328,9 +332,9 @@ export const subitemsIniciales = [
         itemId: "IT-03.1",
 
         materiales: [
-            {insumoId: "MAT-001", cantidad: 300},
-            {insumoId: "MAT-003", cantidad: 750},
-            {insumoId: "MAT-007", cantidad: 900},
+            {insumoId: "MAT-001", cantidad: 350},
+            {insumoId: "MAT-003", cantidad: 0.500},
+            {insumoId: "MAT-007", cantidad: 0.750},
         ],
         manoObra: [
             {insumoId: "MO-001",rendimiento: 0.80},
@@ -446,6 +450,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //TABIQUERIA
     {
         id: "SUB-020",
         codigo: "5.1",
@@ -467,6 +472,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //06-ASILACIONES
     {
         id: "SUB-021",
         codigo: "6.1",
@@ -572,6 +578,7 @@ export const subitemsIniciales = [
         observaciones: "Incluye picado de revoque y reparacion final de los mismos",
         estado: "borrador"
     },
+    //07-REVOQUES
     {
         id: "SUB-026",
         codigo: "7.1",
@@ -756,6 +763,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //08-CONTRAPISOS Y CARPETAS
     {
         id: "SUB-034",
         codigo: "8.1",
@@ -871,6 +879,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //09-REVESTIMIENTOS
     {
         id: "SUB-039",
         codigo: "9.1",
@@ -937,6 +946,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //10-PISOS, ZOCALOS Y UMBRALES
     {
         id: "SUB-042",
         codigo: "10.1.1",
@@ -1201,6 +1211,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //11-MARMOLERIA
     {
         id: "SUB-054",
         codigo: "11.1",
@@ -1243,6 +1254,7 @@ export const subitemsIniciales = [
         observaciones: "",
         estado: "borrador"
     },
+    //12-CUBIERTAS Y TECHADOS
     {
         id: "SUB-056",
         codigo: "12.1.1",

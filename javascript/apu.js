@@ -17,7 +17,7 @@ export function calcularAPU(subitem, materiales, manoObra, equipos) {
                 elemento => elemento.id === recurso.insumoId
             );
             if (!material) return total;
-            return total + material.precio * recurso.cantidad;
+            return total + material.precio / material.equivalenciaComercial * recurso.cantidad;
         },
         0
     );

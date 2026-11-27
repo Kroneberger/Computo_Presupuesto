@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de subítems | Cómputo y Presupuesto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/subitem.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/paginas.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header class="encabezado encabezado-subitems">
+        <div class="contenedor contenedor-subitems">
+            <a href="../index.html" class="back-link">
+                ← Volver al inicio
+            </a>
+            <h1>Listado de subítems</h1>
+            <p>
+                Consulta de tareas, unidades y costos unitarios.
+            </p>
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor contenedor-subitems">
+        <section class="panel panel-subitems">
+            <!-- ENCABEZADO DEL LISTADO -->
+            <div class="encabezado-listado">
+                <div>
+                    <h2>Subítems registrados</h2>
+                    <p>
+                        Listado general de tareas de construcción.
+                    </p>
+                </div>
+                <span id="cantidad-subitems"></span>
+            </div>
+            <!-- BUSCADOR -->
+            <div class="buscador">
+                <input type="search" id="buscar-subitem" placeholder="Buscar por ID o nombre..." autocomplete="off">
+            </div>
+            <!--Tabla-->
+            <div id="lista-agrupaciones"></div>
+        </section>
+    </main>
+    <!-- JAVASCRIPT -->
+    <script type="module" src="../javascript/listasubitems.js"></script>
+</body>
+</html>

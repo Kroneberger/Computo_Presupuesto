@@ -16,7 +16,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 1000 ladrillos",
         equivalenciaComercial: 1000,
-        precio: 300,
+        precio: 150000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -46,7 +46,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 92 ladrillos",
         equivalenciaComercial: 92,
-        precio: 1000,
+        precio: 160000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -56,7 +56,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 144 ladrillos",
         equivalenciaComercial: 144,
-        precio: 850,
+        precio: 140000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },
@@ -66,7 +66,7 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 192 ladrillos",
         equivalenciaComercial: 192,
-        precio: 600,
+        precio: 120000,
         agrupacion: "Albañilería",
         fechaActualizacionPrecio: null
     },

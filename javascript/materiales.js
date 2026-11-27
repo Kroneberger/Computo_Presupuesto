@@ -67,7 +67,7 @@ function crearTabla(lista) {
             material.nombre,
             material.unidad,
             material.unidadComercial,
-            material.equivalenciaComercial,
+            `${material.equivalenciaComercial} ${material.unidad}`,
             material.precio !== null && material.precio !== undefined
                 ? formatoPrecio.format(material.precio)
                 : "Pendiente de cargar",

@@ -647,6 +647,15 @@ strong {
     font-weight: 900;
 }
 
+
+.fila-grupo-item td {
+    background-color: #eaf0f6;
+    color: #294f70;
+    font-weight: 700;
+    padding: 13px 15px;
+    border-bottom: 1px solid #d5dfe8;
+}
+
 /* =========================================
     RESPONSIVE
 ========================================= */

@@ -217,20 +217,20 @@ function renderizarLista(
         // Materiales.
         if (tipo === "material") {
             const cantidad = document.createElement("td");
-            cantidad.textContent = registro.cantidad;
+            cantidad.textContent = `${(registro.cantidad.toFixed(2))} ${insumo.unidad}`;
             const unidadComercial = document.createElement("td");
             unidadComercial.textContent =
                 insumo.unidadComercial || "—";
             const precioUnitario = document.createElement("td");
-            precioUnitario.textContent = formatoMoneda.format(insumo.precio);
+            precioUnitario.textContent = formatoMoneda.format(insumo.precio / insumo.equivalenciaComercial);
             const precioParcial = document.createElement("td");
-            precioParcial.textContent = formatoMoneda.format(insumo.precio * registro.cantidad);
+            precioParcial.textContent = formatoMoneda.format(insumo.precio / insumo.equivalenciaComercial * registro.cantidad);
             fila.append(cantidad, unidadComercial, precioUnitario, precioParcial);
         }
         // Mano de obra.
         if (tipo === "manoObra") {
             const rendimiento = document.createElement("td");
-            rendimiento.textContent = registro.rendimiento;
+            rendimiento.textContent = `${registro.rendimiento.toFixed(2)} ${insumo.unidad}`;
             const precioUnitario = document.createElement("td");
             precioUnitario.textContent = formatoMoneda.format(insumo.salario);
             const precioParcial = document.createElement("td");
@@ -240,7 +240,7 @@ function renderizarLista(
         // Equipos.
         if (tipo === "equipo") {
             const cantidad = document.createElement("td");
-            cantidad.textContent = registro.cantidad;
+            cantidad.textContent = `${(registro.cantidad.toFixed(2))} ${insumo.unidad}`;
             const precioUnitario = document.createElement("td");
             precioUnitario.textContent = formatoMoneda.format(insumo.precio);
             const precioParcial = document.createElement("td");
