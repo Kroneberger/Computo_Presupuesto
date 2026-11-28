@@ -51,6 +51,8 @@ function crearTabla(lista) {
         "Unidad comercial",
         "Equivalencia",
         "Precio",
+        "Tipo",
+        "Fuente",
         "Actualización"
     ].forEach(texto => {
         const th = document.createElement("th");
@@ -71,6 +73,8 @@ function crearTabla(lista) {
             material.precio !== null && material.precio !== undefined
                 ? formatoPrecio.format(material.precio)
                 : "Pendiente de cargar",
+            material.tipoMaterial,
+            material.fuente,
             formatearFecha(material.fechaActualizacionPrecio)
         ];
         datos.forEach((dato, indice) => {

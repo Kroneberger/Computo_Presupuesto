@@ -19,6 +19,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -39,6 +40,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -59,6 +61,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
 
@@ -81,6 +84,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -101,6 +105,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //2-Moviemiento de suelos
@@ -121,6 +126,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
 
@@ -147,6 +153,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -172,6 +179,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -197,6 +205,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -222,6 +231,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -247,6 +257,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -272,6 +283,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -297,6 +309,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -322,6 +335,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     {
@@ -347,6 +361,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001", "FUE-002"],
         estado: "borrador"
     },
     //4 - Mamposteria
@@ -373,6 +388,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -398,6 +414,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -423,6 +440,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -448,6 +466,7 @@ export const subitemsIniciales = [
 
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //TABIQUERIA
@@ -470,6 +489,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //06-ASILACIONES
@@ -492,6 +512,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -513,6 +534,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -534,6 +556,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -555,6 +578,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -576,6 +600,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "Incluye picado de revoque y reparacion final de los mismos",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //07-REVOQUES
@@ -600,6 +625,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -623,6 +649,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -646,6 +673,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -669,6 +697,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -692,6 +721,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -715,6 +745,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -738,6 +769,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -761,6 +793,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //08-CONTRAPISOS Y CARPETAS
@@ -785,6 +818,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -808,6 +842,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -831,6 +866,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -854,6 +890,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -877,6 +914,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //09-REVESTIMIENTOS
@@ -900,6 +938,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -922,6 +961,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -944,6 +984,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //10-PISOS, ZOCALOS Y UMBRALES
@@ -967,6 +1008,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -989,6 +1031,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1011,6 +1054,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1033,6 +1077,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1055,6 +1100,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1077,6 +1123,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1099,6 +1146,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1121,6 +1169,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1143,6 +1192,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1165,6 +1215,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1187,6 +1238,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1209,6 +1261,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //11-MARMOLERIA
@@ -1231,6 +1284,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1252,6 +1306,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     //12-CUBIERTAS Y TECHADOS
@@ -1274,6 +1329,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1295,6 +1351,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1316,6 +1373,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1337,6 +1395,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1358,6 +1417,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1379,6 +1439,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1400,6 +1461,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1421,6 +1483,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1442,6 +1505,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1463,6 +1527,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1484,6 +1549,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
     {
@@ -1505,6 +1571,7 @@ export const subitemsIniciales = [
         ],
         descripcionAmpliada: "",
         observaciones: "",
+        fuentesCalculo: ["FUE-001"],
         estado: "borrador"
     },
 

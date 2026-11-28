@@ -6,9 +6,11 @@ export const materiales = [
         unidad: "kg",
         unidadComercial: "Bolsa de 25 kg",
         equivalenciaComercial: 25,
-        precio: 11000,
+        precio: 10500,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-26",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-002",
@@ -18,7 +20,9 @@ export const materiales = [
         equivalenciaComercial: 1000,
         precio: 150000,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-003",
@@ -26,9 +30,11 @@ export const materiales = [
         unidad: "m³",
         unidadComercial: "Bolson 1m³",
         equivalenciaComercial: 1,
-        precio: 40000,
+        precio: 48791,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Promar.com.ar",
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-004",
@@ -36,19 +42,23 @@ export const materiales = [
         unidad: "kg",
         unidadComercial: "Bolsa de 25 kg",
         equivalenciaComercial: 25,
-        precio: 9000,
+        precio: 9500,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-005",
         nombre: "Ladrillo ceramico hueco 18x18x33",
         unidad: "un",
-        unidadComercial: "Pallet 92 ladrillos",
-        equivalenciaComercial: 92,
-        precio: 160000,
+        unidadComercial: "Pallet 90 ladrillos",
+        equivalenciaComercial: 90,
+        precio: 135040,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Promar.com.ar",
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-006",
@@ -56,28 +66,274 @@ export const materiales = [
         unidad: "un",
         unidadComercial: "Pallet 144 ladrillos",
         equivalenciaComercial: 144,
-        precio: 140000,
+        precio: 147095,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Promar.com.ar",
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-007",
         nombre: "Ladrillo ceramico hueco 8x18x33",
         unidad: "un",
-        unidadComercial: "Pallet 192 ladrillos",
-        equivalenciaComercial: 192,
-        precio: 120000,
+        unidadComercial: "Pallet 198 ladrillos",
+        equivalenciaComercial: 198,
+        precio: 180646,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Promar.com.ar",
+        tipoMaterial: "Material"
     },
     {
         id: "MAT-008",
-        nombre: "Piedra partida",
+        nombre: "Chapa Cincalum sinusoidal C25 de 5.50 x 1.10 m",
+        unidad: "ml",
+        unidadComercial: "Hoja 5.50m x 1.10m",
+        equivalenciaComercial: 5.50,
+        precio: 84000,
+        agrupacion: "Cubiertas y techados",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-009",
+        nombre: "Canto rodado",
         unidad: "m³",
         unidadComercial: "Bolson 1m³",
         equivalenciaComercial: 1,
-        precio: 60000,
+        precio: 158000,
         agrupacion: "Albañilería",
-        fechaActualizacionPrecio: null
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Promar.com.ar",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-010",
+        nombre: "Escombro comun",
+        unidad: "m³",
+        unidadComercial: "Volquete, bolson o camion",
+        equivalenciaComercial: 1,
+        precio: 35000,
+        agrupacion: "Albañilería",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-011",
+        nombre: "Alambre negro recocido 14",
+        unidad: "kg",
+        unidadComercial: "Paquete, kg",
+        equivalenciaComercial: 1,
+        precio: 6500,
+        agrupacion: "Albañilería",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-012",
+        nombre: "Barra de acero Ø6, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-013",
+        nombre: "Barra de acero Ø8, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-014",
+        nombre: "Barra de acero Ø10, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-015",
+        nombre: "Barra de acero Ø12, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-016",
+        nombre: "Barra de acero Ø16, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-017",
+        nombre: "Barra de acero Ø20, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-018",
+        nombre: "Barra de acero Ø25, por metro",
+        unidad: "ml",
+        unidadComercial: "Barra de 12m",
+        equivalenciaComercial: 12,
+        precio: 6500,
+        agrupacion: "Estructura",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-020",
+        nombre: "Baldosa ceramica 40x40",
+        unidad: "m²",
+        unidadComercial: "Caja 2.08m²",
+        equivalenciaComercial: 2.08,
+        precio: 6500,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-021",
+        nombre: "Baldosa ceramica 50x50",
+        unidad: "m²",
+        unidadComercial: "Caja 2.00m²",
+        equivalenciaComercial: 2,
+        precio: 6500,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-022",
+        nombre: "Baldosa ceramica 60x60",
+        unidad: "m²",
+        unidadComercial: "Caja 2.16m²",
+        equivalenciaComercial: 2.16,
+        precio: 6500,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: null,
+        fuente: null,
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-023",
+        nombre: "Pastina Weber",
+        unidad: "kg",
+        unidadComercial: "Bolsa 25 kg",
+        equivalenciaComercial: 25,
+        precio: 12000,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-024",
+        nombre: "Pintura para interiores Alba",
+        unidad: "l",
+        unidadComercial: "Balde de 20 litros",
+        equivalenciaComercial: 20,
+        precio: 250000,
+        agrupacion: "Pinturas",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-025",
+        nombre: "Pintura para exteriores Alba",
+        unidad: "l",
+        unidadComercial: "Balde de 20 litros",
+        equivalenciaComercial: 20,
+        precio: 210000,
+        agrupacion: "Pinturas",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-026",
+        nombre: "Piso flotante 8mm HDF alto transito",
+        unidad: "m²",
+        unidadComercial: "Por m² o caja",
+        equivalenciaComercial: 1,
+        precio: 30000,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-027",
+        nombre: "Zocalo HDF roble claro 6cm",
+        unidad: "ml",
+        unidadComercial: "2 metros",
+        equivalenciaComercial: 2,
+        precio: 5250,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-028",
+        nombre: "Zocalo Pvc Eps 10cm blanco",
+        unidad: "ml",
+        unidadComercial: "2.40 metros",
+        equivalenciaComercial: 2.40,
+        precio: 13000,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
+    },
+    {
+        id: "MAT-029",
+        nombre: "Azulejos ceramicos blanco biselado 10x20",
+        unidad: "m²",
+        unidadComercial: "Caja 1.00 m²",
+        equivalenciaComercial: 1,
+        precio: 42000,
+        agrupacion: "Pisos y revestimientos",
+        fechaActualizacionPrecio: "2026-11-28",
+        fuente: "Mercado Libre",
+        tipoMaterial: "Material"
     }
 ];

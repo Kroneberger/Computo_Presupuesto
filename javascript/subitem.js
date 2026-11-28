@@ -4,7 +4,7 @@ import { manoObra } from "./database/manodeobra.js";
 import { equipos } from "./database/equipos.js";
 import { subitemsIniciales } from "./database/subitems.js";
 import { calcularAPU } from "./apu.js";
-
+import { fuentes, libros } from "./database/fuentes.js";
 
 let subitems = structuredClone(subitemsIniciales);
 
@@ -34,6 +34,8 @@ if (!subitemActual) {
     // Cargamos los datos principales
     document.getElementById("id").textContent =
         subitemActual.id;
+    document.getElementById("codigo").textContent =
+        subitemActual.codigo;
     document.getElementById("descripcion").textContent =
         subitemActual.descripcion;
     document.getElementById("unidad").textContent =
@@ -109,6 +111,87 @@ const campos = {
     observaciones: document.getElementById("observaciones")
 };
 
+// ==========================================
+// 07. FUENTES DE CÁLCULO
+// ==========================================
+// OBTENER LIBRO DE UNA FUENTE
+function obtenerLibro(libroId) {
+    return libros.find(libro => libro.id === libroId);
+}
+// CREAR TARJETA DE FUENTE
+function crearTarjetaFuente(fuente) {
+    const libro = obtenerLibro(fuente.libroId);
+    const tarjeta = document.createElement("a");
+    tarjeta.classList.add("tarjeta-fuente");
+    tarjeta.href = `fuentes.html#${fuente.id}`;
+    // ENCABEZADO
+    const encabezado = document.createElement("div");
+    encabezado.classList.add("fuente-encabezado");
+    const titulo = document.createElement("h4");
+    titulo.textContent = `${fuente.numero} — ${fuente.nombre}`;
+    const tipo = document.createElement("span");
+    tipo.classList.add("fuente-tipo");
+    tipo.textContent = libro?.tipo || "Fuente técnica";
+    encabezado.append(titulo, tipo);
+    // LIBRO
+    const nombreLibro = document.createElement("p");
+    nombreLibro.classList.add("fuente-libro");
+    nombreLibro.textContent = libro
+        ? `${libro.nombre} — ${libro.autor}`
+        : "Libro no encontrado";
+    // DATOS DE REFERENCIA
+    const datos = document.createElement("div");
+    datos.classList.add("fuente-datos");
+    const referencias = [
+        ["Capítulo", fuente.capitulo],
+        ["Tabla", fuente.tabla],
+        ["Página", fuente.pagina]
+    ];
+    referencias.forEach(([etiqueta, valor]) => {
+        if (valor) {
+            const dato = document.createElement("span");
+            dato.textContent = `${etiqueta}: ${valor}`;
+            datos.appendChild(dato);
+        }
+    });
+    // DESCRIPCIÓN
+    const descripcion = document.createElement("p");
+    descripcion.classList.add("fuente-descripcion");
+    descripcion.textContent = fuente.descripcion || "";
+    tarjeta.append(
+        encabezado,
+        nombreLibro,
+        datos,
+        descripcion
+    );
+    return tarjeta;
+}
+
+// RENDERIZAR FUENTES DEL SUBÍTEM
+function renderizarFuentes(subitem) {
+    const contenedor = document.getElementById("lista-fuentes");
+    contenedor.replaceChildren();
+    if (!subitem) {
+        console.error("No se recibió un subítem para renderizar las fuentes.");
+        return;
+    }
+    const fuentesSubitem = subitem.fuentesCalculo || [];
+    // El resto de la función continúa igual...
+    if (fuentesSubitem.length === 0) {
+        const mensaje = document.createElement("p");
+        mensaje.classList.add("mensaje-vacio");
+        mensaje.textContent = "Este subítem todavía no tiene fuentes de cálculo asociadas.";
+        contenedor.appendChild(mensaje);
+        return;
+    }
+    fuentesSubitem.forEach(fuenteId => {
+        const fuente = fuentes.find(f => f.id === fuenteId);
+        if (fuente) {
+            const tarjeta = crearTarjetaFuente(fuente);
+            contenedor.appendChild(tarjeta);
+        }
+    });
+}
 
 // ======================================
 // 5. MOSTRAR TABLAS
@@ -372,6 +455,7 @@ function cargarFicha() {
 // ======================================
 cargarFicha();
 renderizarAPU();
+renderizarFuentes(subitemActual);
 // ------------------------------------
 // SECCIÓN: MATERIALES
 // ------------------------------------

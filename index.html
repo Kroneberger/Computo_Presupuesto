@@ -25,38 +25,69 @@
             </div>
         </a>
     </div>
-    
-<nav class="nav">
-    <a href="pages/listasubitems.html" class="nav-link">Subítems</a>
-    <a href="#informacion" class="nav-link">Información</a>
-    <div class="nav-dropdown">
-        <button
-            class="nav-link nav-dropdown-btn"
-            id="biblioteca-btn"
-            type="button"
-            aria-expanded="false"
-            aria-controls="biblioteca-menu"
-        >
-            Biblioteca
-            <span class="flecha-dropdown">⌄</span>
-        </button>
-        <div class="dropdown-menu" id="biblioteca-menu">
-            <a href="pages/materiales.html" class="dropdown-link">
-                <span>01</span>
-                Materiales
-            </a>
-            <a href="pages/manodeobra.html" class="dropdown-link">
-                <span>02</span>
-                Mano de obra
-            </a>
-            <a href="pages/equipos.html" class="dropdown-link">
-                <span>03</span>
-                Equipos
-            </a>
+        <header class="encabezado">
+    <nav class="navegacion-principal">
+        <!-- MENÚ PRINCIPAL -->
+        <div class="menu-navegacion">
+            <!-- INICIO -->
+            <a href="../index.html" class="nav-link">Inicio</a>
+            <!-- BIBLIOTECA -->
+            <div class="nav-grupo">
+
+                <button
+                    type="button"
+                    class="nav-link nav-boton"
+                    id="boton-biblioteca"
+                    aria-expanded="false"
+                    aria-controls="submenu-biblioteca">
+
+                    Biblioteca
+                    <span class="flecha-menu">⌄</span>
+                </button>
+
+                <div
+                    class="submenu-navegacion"
+                    id="submenu-biblioteca">
+                    <a href="pages/listasubitems.html" class="nav-link">Subítems</a>
+                    <a href="pages/materiales.html" class="nav-link">Materiales</a>
+                    <a href="pages/manodeobra.html" class="nav-link">Mano de obra</a>
+                    <a href="pages/equipos.html" class="nav-link">Equipos</a>
+                    <a href="pages/fuentes.html" class="nav-link">Fuentes de calculo</a>
+                </div>
+            </div>
+
+            <!-- PRESUPUESTOS -->
+            <div class="nav-grupo">
+
+                <button
+                    type="button"
+                    class="nav-link nav-boton"
+                    id="boton-presupuestos"
+                    aria-expanded="false"
+                    aria-controls="submenu-presupuestos">
+
+                    Presupuestos
+                    <span class="flecha-menu">⌄</span>
+                </button>
+
+                <div
+                    class="submenu-navegacion"
+                    id="submenu-presupuestos">
+
+                    <a href="presupuestos.html" class="nav-link">
+                        Mis presupuestos
+                    </a>
+
+                    <a href="nuevo-presupuesto.html" class="nav-link">
+                        Nuevo presupuesto
+                    </a>
+                </div>
+            <!-- INICIO -->
+            <a href="#informacion" class="nav-link">Información</a>
+            </div>
         </div>
-    </div>
-    <a href="#contacto" class="nav-link nav-contacto">Contacto</a>
-</nav>
+    </nav>
+</header>
     </header>
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -347,7 +378,7 @@
     <div class="footer-info">
         <h3>Cómputo y Presupuesto</h3>
         <p>Biblioteca técnica de construcción.</p>
-        <span>PLataforma creada</span>
+        <span>Plataforma creada por Hernan Kroneberger. Version 0.1.6</span>
     </div>
     <div class="footer-contacto">
         <h4>Contacto</h4>
@@ -365,5 +396,6 @@
 
     <!-- JAVASCRIPT -->
     <script type="module" src="javascript/main.js"></script>
+    <script type="module" src="javascript/navegacion.js"></script>
 </body>
 </html>

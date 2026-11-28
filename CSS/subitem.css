@@ -656,6 +656,106 @@ strong {
     border-bottom: 1px solid #d5dfe8;
 }
 
+
+/* ==========================================
+   07. FUENTES DE CÁLCULO
+========================================== */
+
+.panel-fuentes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration:none;
+}
+
+.descripcion-seccion {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: -8px;
+}
+
+#lista-fuentes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarjeta-fuente {
+    padding: 16px 18px;
+
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #527d9b;
+    border-radius: 8px;
+}
+
+.fuente-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.fuente-encabezado h4 {
+    margin: 0;
+    color: #26394d;
+    font-size: 15px;
+}
+
+.fuente-tipo {
+    padding: 4px 9px;
+    background-color: #e8f0f5;
+    color: #42647e;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.fuente-libro {
+    margin: 10px 0;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.fuente-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-decoration: none !important;
+}
+
+.fuente-datos span {
+    padding: 5px 9px;
+    background-color: #edf2f7;
+    border-radius: 5px;
+    color: #475569;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.fuente-descripcion {
+    margin: 12px 0 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.mensaje-vacio {
+    padding: 16px;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+a * {
+    text-decoration: none !important;
+}
 /* =========================================
     RESPONSIVE
 ========================================= */

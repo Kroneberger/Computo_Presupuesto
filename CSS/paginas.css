@@ -326,7 +326,7 @@ table tbody tr:hover {
         flex-direction: column;
     }
     .tabla {
-        min-width: 850px;
+        min-width: 1150px;
     }
 
     .tabla-mano-obra {
@@ -341,7 +341,7 @@ table tbody tr:hover {
         overflow-x: auto;
     }
     .agrupacion summary{
-        min-width: 850px;
+        min-width: 1150px;
     }
 
     .agrupacion-mano-obra summary{

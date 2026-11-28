@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de mano de obra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/subitem.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/paginas.css">
+    <link rel="stylesheet" href="../CSS/fuentes.css">
+</head>
+<body>
+    <header class="encabezado encabezado-mano-obra">
+        <div class="contenedor contenedor-mano-obra">
+            <a href="../index.html" class="back-link">← Volver al inicio</a>
+            <h1>Biblioteca de mano de obra</h1>
+            <p>
+                Consulta de categorías laborales, unidades y recursos disponibles.
+            </p>
+        </div>
+    </header>
+    <main class="container">
+        <div class="page-heading">
+            <div>
+                <h2>Fuentes de cálculo</h2>
+                <p>
+                    Biblioteca de documentación técnica y referencias
+                    utilizadas para desarrollar los cómputos métricos.
+                </p>
+            </div>
+        </div>
+        <!-- HERRAMIENTAS DE BÚSQUEDA -->
+        <section class="herramientas-fuentes">
+            <input
+                type="text"
+                id="buscador-fuentes"
+                placeholder="Buscar por ID o nombre..."
+            >
+            <select id="filtro-tipo">
+                <option value="todos">Todos los tipos</option>
+                <option value="fuente">De fuente</option>
+                <option value="personal">Personal</option>
+            </select>
+        </section>
+        <!-- CATÁLOGO DE FUENTES -->
+        <section class="catalogo-fuentes">
+            <div id="lista-fuentes" class="grid-fuentes"></div>
+        </section>
+    </main>
+    <script type="module" src="../javascript/fuentes.js"></script>
+</body>
+</html>
